@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sign Up</title>
+</head>
+<body style="font-family: Comfortaa, sans-serif;">
+    <!-- Pre-header -->
+    <section class="pre-header flex items-center justify-center bg-black w-[100%] text-white py-[15px] gap-[230px]">
+        <p class="pre-header-title">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <span class="font-semibold underline">ShopNow</span></p>
+        <div class="pre-header-language flex align-center gap-[11px] cursor-pointer">
+            <p>English</p>
+            <img src="img/Chevron-down.svg" alt="">
+        </div>
+    </section>
+    <main>
+        <!-- Header -->
+        <header class="header flex items-center gap-[210px] px-[135px] pt-[45px] pb-[21px] border-b-[0.5px] border-[#B3B3B3] mb-[60px]">
+            <div class="header-logo text-[#20124D]" style="font-family: Comfortaa, sans-serif;">
+                <h2 class="text-[22px] mb-0">hərşey</h2>
+                <h1 class="text-[24px] font-semibold">burada</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list flex gap-x-[48px]">
+                    <li class="nav-item cursor-pointer hover:text-[#DB4444]">
+                        Home
+                    </li>
+                    <li class="nav-item cursor-pointer hover:text-[#DB4444]">
+                        Contact
+                    </li>
+                    <li class="nav-item cursor-pointer hover:text-[#DB4444]">
+                        About
+                    </li>
+                    <li class="nav-item cursor-pointer hover:text-[#DB4444]">
+                        Sign Up
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-searchbar flex gap-[34px] bg-[#F5F5F5] py-[7px] pl-[12px] pr-[20px] rounded-[4px]">
+                <input type="text" placeholder="What are you looking for?"
+                 class="bg-[#F5F5F5] border-0 outline-0 w-[200px]">
+                <img src="img/Glass.svg" alt="">
+            </div>
+        </header>
+        <!-- Content -->
+        <main class="main-content container  text-[14px] ">
+            <p class="text-right my-[80px] mr-[103px]">Xoş Gəlmisiniz! <span class="text-[#FF7518]">Md Rimel</span></p>
+            <div class="flex gap-[100px] mx-[135px]">
+                <aside class="">
+                    <ul>
+                        <li class="mb-[16px] font-bold">Hesabını idarə et</li>
+                        <li>
+                            <ul class="ml-[35px] mb-[24px]">
+                                <li class="text-[#FF7518]">Mənim hesabım</li>
+                                <li class="opacity-70">Address kitabçam</li>
+                                <li class="opacity-70">My Payment Options</li>
+                            </ul>
+                        </li>
+                        <li class="font-bold">Mənim sifarişlərim</li>
+                    </ul>
+                </aside>
+                <div class="px-[80px] py-[40px]" style="box-shadow: 0px 1px 13px 0px #0000000D;">
+                    <p class="text-[20px] text-[#FF7518] mb-[16px] font-[500]">Hesabını idarə et</p>
+                    <form action="post" class="grid grid-cols-2 justify-center gap-y-[24px] gap-x-[50px]">
+                        <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
+                            <label for="first-name" class="text-[16px]">First Name</label>
+                            <input type="text" id="first-name" class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
+                        </div>
+                        <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
+                            <label for="last-name" class="text-[16px]">Last Name</label>
+                            <input type="text" id="last-name" class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
+                        </div>
+                        <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
+                            <label for="email" class="text-[16px]">Email</label>
+                            <input type="email" id="email" class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
+                        </div>
+                        <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
+                            <label for="address" class="text-[16px]">Address</label>
+                            <input type="text" id="address" class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
+                        </div>
+                        <div class="form-item col-span-2">
+                            <p>Password Changes</p>
+                            <input type="password" placeholder="Current Password" id="last-name" class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0 mb-[16px] placeholder:opacity-70 placeholder:text-[#000000]">
+                            <input type="password" placeholder="New Password" id="last-name" class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0 mb-[16px] placeholder:opacity-70 placeholder:text-[#000000]">
+                            <input type="password" placeholder="Confirm New Password" id="last-name" class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0 placeholder:opacity-70 placeholder:text-[#000000]">
+                        </div>
+                        <div class="form-btns flex lg:justify-self-end gap-[32px] col-span-2">
+                            <button class="">Cancel</button>
+                            <button class="bg-[#FF7518] lg:py-[16px] lg:px-[48px] py-[8px] px-[24px] text-[#fff]" type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </main>
+</body>
+</html>
