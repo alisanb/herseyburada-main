@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="border-b border-[#E3E3E3]">
+        <div
+          class="mt-[10px] flex justify-between items-center w-[1200px] mx-auto"
+        >
+          <div class="flex justify-between items-center w-[675px]">
+            <div class="font-[700] text-[24px] font-logo">
+              <a href="index.html">
+                <p>hərşey</p>
+                <p>burada</p>
+              </a>
+            </div>
+  
+            <nav class="flex">
+              <ul class="flex gap-x-[48px]">
+                <li>
+                  <a href="index.html" class=" ">Home</a>
+                </li>
+                <li>
+                  <a href="contact.html" class="">Contact</a>
+                </li>
+                <li>
+                  <a href="about.html" class="">About</a>
+                </li>
+                <li>
+                  <a href="signup.html" class="">Sign Up</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="w-[347px] flex justify-between items-center gap-x-[24px]">
+            <div
+              class="flex justify-between items-center h-[38px] bg-[#F5F5F5] py-[7px] pl-[20px] pr-[12px] rounded-[4px] grow"
+            >
+              <input
+                class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow"
+                type="text"
+                placeholder="What are you looking for?"
+              />
+              <i class="fa-solid fa-magnifying-glass text-[16px]"></i>
+            </div>
+            <div class="flex gap-x-[16px]">
+                <a href="wishlist.html">
+                    <i class="fa-regular fa-heart text-[20px]"></i>
+                </a>
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping text-[20px]"></i>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+    </header>
+    <main class="w-[1200px] mx-auto pt-[80px] font-poppins">
+        <div class="mb-[80px]">
+            <a href="account.html" class="opacity-50">Account</a>
+            <span class="opacity-50 mx-[12px]">/</span>
+            <a href="#" class="opacity-50">My Account</a>
+            <span class="opacity-50 mx-[12px]">/</span>
+            <a href="#" class="opacity-50">Product</a>
+            <span class="opacity-50 mx-[12px]">/</span>
+            <a href="cart.html" class="opacity-50">View Cart</a>
+            <span class="opacity-50 mx-[12px]">/</span>
+            <a href="checkout.html">CheckOut</a>
+        </div>
+        <div>
+            <h1 class="font-medium text-[36px] mb-[48px]">Billing Details</h1>
+            <div class="flex justify-between">
+                <div>
+                    <div class="space-y-[32px] mb-[24px]">
+                        <div>
+                            <p class="mb-[8px] opacity-40">First Name<span class="text-[#ff7518]">*</span></p>
+                            <input type="text" class="bg-[#f5f5f5] h-[50px] w-[470px] px-[24px]  outline-none">
+                        </div>
+                        <div>
+                            <p class="mb-[8px] opacity-40">Company Name</p>
+                            <input type="text" class="bg-[#f5f5f5] h-[50px] w-[470px] px-[24px]  outline-none">
+                        </div>
+                        <div>
+                            <p class="mb-[8px] opacity-40">Street Address<span class="text-[#ff7518]">*</span></p>
+                            <input type="text" class="bg-[#f5f5f5] h-[50px] w-[470px] px-[24px]  outline-none">
+                        </div>
+                        <div>
+                            <p class="mb-[8px] opacity-40">Apartment, floor, etc. (optional)</p>
+                            <input type="text" class="bg-[#f5f5f5] h-[50px] w-[470px] px-[24px]  outline-none">
+                        </div>
+                        <div>
+                            <p class="mb-[8px] opacity-40">Town/City<span class="text-[#ff7518]">*</span></p>
+                            <input type="text" class="bg-[#f5f5f5] h-[50px] w-[470px] px-[24px]  outline-none">
+                        </div>
+                        <div>
+                            <p class="mb-[8px] opacity-40">Phone Number<span class="text-[#ff7518]">*</span></p>
+                            <input type="text" class="bg-[#f5f5f5] h-[50px] w-[470px] px-[24px]  outline-none">
+                        </div>
+                        <div>
+                            <p class="mb-[8px] opacity-40">Email Address<span class="text-[#ff7518]">*</span></p>
+                            <input type="text" class="bg-[#f5f5f5] h-[50px] w-[470px] px-[24px]  outline-none">
+                        </div>
+                    </div>
+                    <div class="flex space-x-[16px]">
+                        <input type="checkbox" id="save-info-check" class="border-black border size-[24px]  rounded-[4px]">
+                        <label for="save-info-check" class="cursor-pointer">Save this information for faster check-out next time</label>
+                    </div> 
+                </div>
+                <div class="space-y-[32px] w-[527px]">
+                    <div class="space-y-[32px] w-[425px]">
+                        <div class="flex items-center h-[54px] ">
+                            <figure class="size-[54px] px-[2px] py-[5px] mr-[24px]">
+                                <img src="./assets/img/gamepad.png" alt="">
+                            </figure>
+                            <div class="flex space-x-[210px]">
+                                <p>H1 Gamepad</p>
+                                <p>$650</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center h-[54px]">
+                            <figure class="size-[54px] px-[2px] py-[5px] mr-[24px]">
+                                <img src="./assets/img/monitor.png" alt="">
+                            </figure>
+                            <div class="flex space-x-[210px]">
+                                <p>LCD Monitor</p>
+                                <p>$1100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[422px] space-y-[16px]">
+                        <div class="flex justify-between border-b border-black/40 pb-[16px]">
+                            <span>Subtotal:</span>
+                            <span>$1750</span>
+                        </div>
+                        <div class="flex justify-between border-b border-black/40 pb-[16px]">
+                            <span>Shipping:</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="flex justify-between pb-[16px]">
+                            <span>Total:</span>
+                            <span>$1750</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-[427px]">
+                        <div class="space-x-[16px] flex items-center "> 
+                            <input type="radio" name="payment" class="size-[24px]">
+                            <span>Bank</span>
+                        </div>
+                        <div class="space-x-[8px] flex ">
+                            <figure class="w-[42px] h-[28px] px-[2px]">
+                                <img class="w-full h-full object-contain" src="./assets/img/bkash.png" alt="bKash">
+                            </figure>
+                            <figure class="w-[42px] h-[28px] px-[2px]">
+                                <img class="w-full h-full object-contain" src="./assets/img/visa.png" alt="Visa">
+                            </figure>
+                            <figure class="w-[42px] h-[28px] px-[2px]">
+                                <img class="w-full h-full object-contain" src="./assets/img/master-card.png" alt="MasterCard">
+                            </figure>
+                            <figure class="w-[42px] h-[28px] px-[2px]">
+                                <img class="w-full h-full object-contain" src="./assets/img/fireball.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="space-x-[16px] flex items-center "> 
+                        <input type="radio" name="payment" class="size-[24px]">
+                        <span>Cash on delivery</span>
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Coupon Code" class="px-[24px] border border-black h-[56px] w-[300px] opacity-50 outline-none rounded-[4px] mr-[16px]">
+                        <button class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] hover:bg-[#e07575]">Apply Coupon</button>
+                    </div>
+                    <div>
+                        <button class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] hover:bg-[#e07575]">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-[129px]">
+        <div class="bg-black text-white py-[20px] px-[100px] flex justify-between">
+            <div class="font-[700] text-[24px] font-logo">
+                <a href="index.html">
+                    <p>hərşey</p>
+                    <p>burada</p>
+                </a>
+            </div>
+            <div class="flex gap-x-[48px] items-center">
+                <a href="account.html">Account</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms Of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="flex gap-x-[10px] items-end">
+                <i class="text-[14px] fa-brands fa-facebook-f"></i>
+                <i class="text-[14px] fa-brands fa-twitter"></i>
+                <i class="text-[14px] fa-brands fa-instagram"></i>
+                <i class="text-[14px] fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div
+                class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px]"
+        >
+            <div class="size-[20px]">
+                <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="" />
+            </div>
+
+            <div class="text-[16px] text-white">
+                <a href="#" class="opacity-50">
+                    Copyright Rimel 2022. All right reserved
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

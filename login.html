@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../log%20in/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins">
+    <header class="border-b border-[#E3E3E3]">
+        <div class="mt-[10px] flex items-center px-[50px]">
+            <div class="flex justify-between items-center w-[675px]">
+                <div class="font-[700] text-[24px] font-logo">
+                    <a href="index.html">
+                        <p>hərşey</p>
+                        <p>burada</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content flex justify-between items-center w-[1200px] mx-auto">
+        <form class="sign-up-form flex flex-col ml-[20px]" method="post">
+            <h1 class="form-title text-[36px] font-[500] mb-[24px]" style="font-family: 'Inter', sans-serif;">
+                <span style="font-family: Comfortaa, sans-serif;">hərşeyburada</span>-ya Daxil ol
+            </h1>
+            <input type="text" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
+                placeholder="Email ya da Telefon nömrəsi">
+            <input type="password" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
+                placeholder="Parol">
+            <div class="form-submit flex items-center gap-[87px]">
+                <button class="submit-btn bg-[#FF7518] text-[#ffffff] px-[48px] h-[56px] mb-[16px] rounded-[4px] cursor-pointer"
+                    type="submit">Daxil ol</button>
+                <p class="text-[#FF7518] text-[16px] cursor-pointer">Parolu unutmusan?</p>
+            </div>
+        </form>
+        <figure class="w-[600px] h-[650px]">
+            <img class="w-full h-full object-cover" src="./assets/img/Market.png" alt="">
+        </figure>
+    </main>
+    <footer>
+        <div class="bg-black text-white py-[20px] px-[100px] flex justify-between">
+            <div class="font-[700] text-[24px] font-logo">
+                <a href="index.html">
+                    <p>hərşey</p>
+                    <p>burada</p>
+                </a>
+            </div>
+            <div class="flex gap-x-[48px] items-center">
+                <a href="account.html">Account</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms Of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="flex gap-x-[10px] items-end">
+                <i class="text-[14px] fa-brands fa-facebook-f"></i>
+                <i class="text-[14px] fa-brands fa-twitter"></i>
+                <i class="text-[14px] fa-brands fa-instagram"></i>
+                <i class="text-[14px] fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px]">
+            <div class="size-[20px]">
+                <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="" />
+            </div>
+
+            <div class="text-[16px] text-white">
+                <a href="#" class="opacity-50">
+                    Copyright Rimel 2022. All right reserved
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
