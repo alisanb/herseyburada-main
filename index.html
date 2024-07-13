@@ -13,59 +13,55 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     />
   </head>
   <body class="font-poppins">
-    <div class="border-b border-[#E3E3E3]">
-      <div
-        class="mt-[10px] flex justify-between items-center w-[1200px] mx-auto"
-      >
-        <div class="flex justify-between items-center w-[675px]">
-          <div class="font-[700] text-[24px] font-logo">
-            <a href="#">
-              <p>hərşey</p>
-              <p>burada</p>
-            </a>
-          </div>
 
-          <div class="flex">
-            <ul class="flex gap-x-[48px]">
-              <li>
-                <a href="" class=" ">Home</a>
-              </li>
-              <li>
-                <a href="" class="">Contact</a>
-              </li>
-              <li>
-                <a href="" class="">About</a>
-              </li>
-              <li>
-                <a href="" class="">Sign Up</a>
-              </li>
-            </ul>
-          </div>
+    <nav>
+        <div class="sticky">
+            <div class="navbar">
+                <div class="logo-div">
+                    <a href="#">
+                        <img src="/assets/img/hərşeyburada.svg" alt="logo" class="w-[202px] h-[35px]">
+                    </a>
+                </div>
+                <div class="search-bar-div">
+                    <div class="search-bar">
+                        <input type="search" placeholder="Nə ilə maraqlanırsınız?" class="search">
+                        <button class="search-button">
+                            <div class="search-icon"></div>
+                        </button>
+                    </div>
+                </div>
+                <div class="icons-control-div">
+                    <div class="control-elem">
+                        <a href="#" class="links">
+                            <div class="elem-cart elem w-[62px]">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <p class="elem-text">Səbətim</p>
+                            </div>
+                        </a>
+                        <a href="" class="links">
+                            <div class="elem-wishlist elem w-[73px]">
+                                <i class="fa-solid fa-heart"></i>
+                                <p class="elem-text">Seçilmişlər</p>
+                            </div>
+                        </a>
+                        <a href="" class="links">
+                            <div class="elem-account elem w-[62px]">
+                                <i class="fa-regular fa-user"></i>
+                                <p class="elem-text">Hesabım</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="w-[347px] flex justify-between items-center gap-x-[24px]">
-          <div
-            class="flex justify-between items-center h-[38px] bg-[#F5F5F5] py-[7px] pl-[20px] pr-[12px] rounded-[4px] grow"
-          >
-            <input
-              class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow"
-              type="text"
-              placeholder="What are you looking for?"
-            />
-            <i class="fa-solid fa-magnifying-glass text-[16px]"></i>
-          </div>
-          <div class="flex gap-x-[16px]">
-            <i class="fa-regular fa-heart text-[20px]"></i>
-            <i class="fa-solid fa-cart-shopping text-[20px]"></i>
-          </div>
-        </div>
-      </div>
-    </div>
+    </nav>
 
     <div class="w-[1200px] mx-auto">
       <div class="mt-[40px] mb-[140px] flex justify-between">
