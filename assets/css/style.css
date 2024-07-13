@@ -147,6 +147,7 @@ footer{
     flex-direction: column;
 }
 .copyrights{
+    width: 1170px;
     height: 52px;
     background-color: rgb(9, 9, 9);
     border-top: 1px solid #d7d7d7;
