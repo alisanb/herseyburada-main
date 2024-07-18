@@ -62,15 +62,15 @@
             </nav>
         </div>
     </header>
-    <main class="w-[1200px] mx-auto pt-[80px] font-poppins">
-        <div class="mb-[80px]">
-            <a href="account.html" class="opacity-50">Account</a>
+    <main class="w-[1200px] mx-auto pt-[40px] font-poppins">
+        <div class="mb-[40px]">
+            <a href="account.html" class="opacity-50 hover:opacity-80">Account</a>
             <span class="opacity-50 mx-[12px]">/</span>
-            <a href="#" class="opacity-50">My Account</a>
+            <a href="./account.html" class="opacity-50 hover:opacity-80">My Account</a>
             <span class="opacity-50 mx-[12px]">/</span>
-            <a href="#" class="opacity-50">Product</a>
+            <a href="#" class="opacity-50 hover:opacity-80">Product</a>
             <span class="opacity-50 mx-[12px]">/</span>
-            <a href="cart.html" class="opacity-50">View Cart</a>
+            <a href="cart.html" class="opacity-50 hover:opacity-80">View Cart</a>
             <span class="opacity-50 mx-[12px]">/</span>
             <a href="checkout.html">CheckOut</a>
         </div>
@@ -118,21 +118,21 @@
                 <div class="space-y-[32px] w-[527px]">
                     <div class="space-y-[32px] w-[425px]">
                         <div class="flex items-center h-[54px] ">
-                            <figure class="size-[54px] px-[2px] py-[5px] mr-[24px]">
+                            <figure class="inline-flex items-center size-[54px] px-[2px] py-[5px] mr-[24px]">
                                 <img src="./assets/img/gamepad.png" alt="">
                             </figure>
-                            <div class="flex space-x-[210px]">
-                                <p>H1 Gamepad</p>
-                                <p>$650</p>
+                            <div class="flex w-full justify-between items-center">
+                                <soan>H1 Gamepad</soan>
+                                <span>$650</span>
                             </div>
                         </div>
                         <div class="flex items-center h-[54px]">
-                            <figure class="size-[54px] px-[2px] py-[5px] mr-[24px]">
+                            <figure class="inline-flex items-center size-[54px] px-[2px] py-[5px] mr-[24px]">
                                 <img src="./assets/img/monitor.png" alt="">
                             </figure>
-                            <div class="flex space-x-[210px]">
-                                <p>LCD Monitor</p>
-                                <p>$1100</p>
+                            <div class="flex w-full justify-between items-center">
+                                <span>LCD Monitor</span>
+                                <span>$1100</span>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                         <input type="radio" name="payment" class="size-[24px]">
                         <span>Cash on delivery</span>
                     </div>
-                    <div>
+                    <div class="flex justify-between">
                         <input type="text" placeholder="Coupon Code"
                             class="px-[24px] border border-black h-[56px] w-[300px] opacity-50 outline-none rounded-[4px] mr-[16px]">
                         <button
