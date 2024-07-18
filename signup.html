@@ -27,7 +27,7 @@
 </head>
 
 <body class="font-body">
-    <<header class=" border-b-[1px]">
+    <header class=" border-b-[1px] sticky top-0 bg-white z-10">
         <div class="mt-[10px] w-[1200px] mx-auto flex justify-between items-center py-[20px]">
             <div class="flex justify-between items-center w-[830px] gap-x-[70px]">
                 <div class="text-[24px] font-logo">
@@ -61,98 +61,105 @@
                 </a>
             </nav>
         </div>
-        </header>
-        <main class="main-content flex items-center gap-[130px] w-[1200px] mx-auto">
-            <figure class="w-[600px] h-[650px]">
-                <img class="w-full h-full object-cover" src="./assets/img/Market.png" alt="">
-            </figure>
-            <form class="sign-up-form flex flex-col" method="post">
-                <h1 class="form-title text-[36px] font-[500] mb-[24px]" style="font-family: 'Inter', sans-serif;">Hesab
-                    yaradın</h1>
-                <h3 class="form-subtitle text-[16px] mb-[48px]">Məlumatlarnızı aşağıda qeyd edin</h3>
-                <input type="text" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
-                    placeholder="Ad">
-                <input type="text" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
-                    placeholder="Email ya da Telefon nömrəsi">
-                <input type="password" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
-                    placeholder="Parol">
-                <button
-                    class="submit-btn bg-[#FF7518] text-[#ffffff] py-[16px] px-[122px] mb-[16px] rounded-[4px] cursor-pointer"
-                    type="submit">Hesab yarat</button>
-                <button
-                    class="google-btn bg-[#fffffff] border-[1px] border-[#B3B3B3] py-[16px] px-[86px] mb-[32px] rounded-[4px] cursor-pointer">Sign
-                    Up with Google</button>
-                <p class="form-bottom text-center opacity-70">Artıq hesabın var?
-                    <a href="login.html" class="ml-[16px] underline opacity-100">Daxil ol</a>
-                </p>
-            </form>
-        </main>
-        <footer class="bg-black">
-            <div class="w-[1200px] mx-auto text-white py-[50px] flex justify-between mt-[50px]">
-                <div>
-                    <div class="space-y-[24px] ">
-                        <a href="./about.html">
-                            <img src="./assets/img/hərşeyburada2.svg" alt="">
-                        </a>
-                        <h2 class="text-[20px] font-[500]">Subscribe</h2>
-                        <h4 class="text-[16px] font-[300]">10% Endirim qazan</h4>
-                    </div>
-
-                    <div class="mt-[48px] ">
-                        <input class="bg-black outline-none rounded-[4px] border border-white p-[8px]" type="email"
-                            placeholder="Enter your email">
-                    </div>
+    </header>
+    <main class="main-content flex items-center gap-[130px] w-[1200px] mx-auto">
+        <figure class="w-[600px] h-[650px]">
+            <img class="w-full h-full object-cover" src="./assets/img/Market.png" alt="">
+        </figure>
+        <form class="sign-up-form flex flex-col" method="post">
+            <h1 class="form-title text-[36px] font-[500] mb-[24px]" style="font-family: 'Inter', sans-serif;">Hesab
+                yaradın</h1>
+            <h3 class="form-subtitle text-[16px] mb-[48px]">Məlumatlarnızı aşağıda qeyd edin</h3>
+            <input type="text" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
+                placeholder="Ad">
+            <input type="text" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
+                placeholder="Email ya da Telefon nömrəsi">
+            <input type="password" class="form-input border-b-[1px] border-b-[#B3B3B3] outline-0 mb-[40px]"
+                placeholder="Parol">
+            <button
+                class="submit-btn bg-[#FF7518] text-[#ffffff] py-[16px] px-[122px] mb-[16px] rounded-[4px] cursor-pointer"
+                type="submit">Hesab yarat</button>
+            <button
+                class="google-btn bg-[#fffffff] border-[1px] border-[#B3B3B3] py-[16px] px-[86px] mb-[32px] rounded-[4px] cursor-pointer">Sign
+                Up with Google</button>
+            <p class="form-bottom text-center opacity-70">Artıq hesabın var?
+                <a href="login.html" class="ml-[16px] underline opacity-100">Daxil ol</a>
+            </p>
+        </form>
+    </main>
+    <footer class="bg-black">
+        <div class="w-[1200px] mx-auto text-white py-[50px] flex justify-between mt-[50px]">
+            <div>
+                <div class="space-y-[24px]">
+                    <a href="./about.html">
+                        <img src="./assets/img/hərşeyburada2.svg" alt="">
+                    </a>
+                    <h2 class="text-[20px] font-[500]">Abunə Olun</h2>
+                    <h4 class="text-[16px] font-[300]">10% Endirim qazan</h4>
                 </div>
 
-
-                <div class="flex flex-col ">
-                    <h3 class="font-[500] text-[20px] mb-[24px]">Dəstək</h3>
-                    <p class="text-[16px] mb-[16px]">
-                        Bakı, Azərbaycan
-                    </p>
-                    <p class="text-[16px] mb-[16px]">
-                        <a href="#">herseyburadacomp@gmail.com</a>
-                    </p>
-                    <p class="text-[16px] mb-[16px]">
-                        <a href="#">+994 (55) 777 88 85</a>
-                    </p>
+                <div class="mt-[48px]">
+                    <input class="bg-black outline-none rounded-[4px] border border-white p-[8px]" type="email"
+                        placeholder="Email daxil edin">
                 </div>
 
-                <div class="flex flex-col ">
-                    <h3 class="font-[500] text-[20px] mb-[24px]">Hesab</h3>
-                    <a class="text-[16px] mb-[16px]" href="./account.html">Hesabım</a>
-                    <a class="text-[16px] mb-[16px]" href="./signup.html">Daxil ol</a>
-                    <a class="text-[16px] mb-[16px]" href="./cart.html">Səbətim</a>
-                    <a class="text-[16px] mb-[16px]" href="./wishlist.html">Sevimlilər</a>
-                    <a class="text-[16px] mb-[16px]" href="./account.html">Alış-Veriş</a>
-                </div>
-
-                <div class="flex flex-col">
-                    <h3 class="font-[500] text-[20px] mb-[24px]">Quick Link</h3>
-                    <a class="text-[16px] mb-[16px]" href="№">Privacy Policy</a>
-                    <a class="text-[16px] mb-[16px]" href="№">Terms Of Use</a>
-                    <a class="text-[16px] mb-[16px]" href="./contact.html">Contact</a>
-                </div>
-                <div class="flex flex-col space-y-[16px]">
-                    <i class="text-[20px] fa-brands fa-facebook-f"></i>
-                    <i class="text-[20px] fa-brands fa-twitter"></i>
-                    <i class="text-[20px] fa-brands fa-instagram"></i>
-                    <i class="text-[20px] fa-brands fa-linkedin-in"></i>
-                </div>
-            </div>
-            <div
-                class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px] border-[#141414]">
-                <div class="size-[20px]">
-                    <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="">
-                </div>
-
-                <div class="text-[16px] text-[#d9d9d9] border-b-[#d7d7d7]">
+                <div class="flex space-x-[16px] mt-[24px]">
                     <a href="#">
-                        Copyright Rimel 2022. All right reserved
+                        <i class="text-[20px] fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="text-[20px] fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/herseyburadaz/">
+                        <i class="text-[20px] fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="text-[20px] fa-brands fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
-        </footer>
+
+            <div class="flex flex-col">
+                <h3 class="font-[500] text-[20px] mb-[24px]">Dəstək</h3>
+                <p class="text-[16px] mb-[16px]">
+                    Bakı, Azərbaycan
+                </p>
+                <p class="text-[16px] mb-[16px]">
+                    <a href="#">herseyburadacomp@gmail.com</a>
+                </p>
+                <p class="text-[16px] mb-[16px]">
+                    <a href="#">+994 (55) 777 88 85</a>
+                </p>
+            </div>
+
+            <div class="flex flex-col">
+                <h3 class="font-[500] text-[20px] mb-[24px]">Hesab</h3>
+                <a class="text-[16px] mb-[16px]" href="./account.html">Hesabım</a>
+                <a class="text-[16px] mb-[16px]" href="./signup.html">Daxil ol</a>
+                <a class="text-[16px] mb-[16px]" href="./cart.html">Səbətim</a>
+                <a class="text-[16px] mb-[16px]" href="./wishlist.html">Sevimlilər</a>
+                <a class="text-[16px] mb-[16px]" href="./account.html">Alış-Veriş</a>
+            </div>
+
+            <div class="flex flex-col">
+                <h3 class="font-[500] text-[20px] mb-[24px]">Tez Link</h3>
+                <a class="text-[16px] mb-[16px]" href="#">Gizlilik Siyasəti</a>
+                <a class="text-[16px] mb-[16px]" href="#">İstifadə Şərtləri</a>
+                <a class="text-[16px] mb-[16px]" href="./contact.html">Əlaqə</a>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px] border-[#141414]">
+            <div class="size-[20px]">
+                <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="">
+            </div>
+            <div class="text-[16px] text-[#d9d9d9]">
+                <a href="#">
+                    Copyright Rimel 2022. Bütün hüquqlar qorunur
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
