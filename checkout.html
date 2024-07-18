@@ -6,62 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckOut</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        fontFamily: {
-          'body': ['Poppins', '"sans-serif"'],
-          'logo': ['Comfortaa', '"sans-serif"']
-        },
-      }
-    }
-  </script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'body': ['Poppins', '"sans-serif"'],
+                    'logo': ['Comfortaa', '"sans-serif"']
+                },
+            }
+        }
+    </script>
 </head>
 
 <body class="font-body">
-    <header class=" border-b-[1px]">
+    <header class=" border-b-[1px] sticky top-0 bg-white z-10">
         <div class="mt-[10px] w-[1200px] mx-auto flex justify-between items-center py-[20px]">
-          <div class="flex justify-between items-center w-[830px] gap-x-[70px]">
-            <div class="text-[24px] font-logo">
-              <a href="./index.html">
-                <img src="./assets/img/hərşeyburada.svg" alt="">
-            </a>
+            <div class="flex justify-between items-center w-[830px] gap-x-[70px]">
+                <div class="text-[24px] font-logo">
+                    <a href="./index.html">
+                        <img src="./assets/img/hərşeyburada.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="flex justify-between items-center h-[40px] grow pr-[5px] pl-[14px] rounded-[14px] border">
+                    <input class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow" type="text"
+                        placeholder="Nə ilə maraqlanırsınız?">
+
+                    <button
+                        class="size-[32px] bg-[#ff9130] rounded-[10px] cursor-pointer text-white inline-flex justify-center items-center ">
+                        <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
+                    </button>
+                </div>
             </div>
-    
-            <div
-              class="flex justify-between items-center h-[40px] grow pr-[5px] pl-[14px] rounded-[14px] border">  
-              <input class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow" type="text"
-                placeholder="Nə ilə maraqlanırsınız?">
-                
-                <button class="size-[32px] bg-[#ff9130] rounded-[10px] cursor-pointer text-white inline-flex justify-center items-center ">
-                  <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
-                </button>
-            </div>
-          </div>
-          <nav class="w-[347px] flex justify-end gap-x-[16px] items-center gap-x-[24px]">
-            <a href="./cart.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-              <i class="fa-solid fa-cart-shopping text-[20px] "></i>
-              <span class="text-[12px]">Səbətim</span>
-            </a>
-            <a href="./wishlist.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-              <i class="fa-solid fa-heart text-[20px] "></i>
-              <span class="text-[12px]">Sevimlilərim</span>
-            </a>
-            <a href="./account.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-              <i class="fa-solid fa-user text-[20px] "></i>
-              <span class="text-[12px]">Hesabım</span>
-            </a>
-          </nav>
+            <nav class="w-[347px] flex justify-end gap-x-[16px] items-center gap-x-[24px]">
+                <a href="./cart.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+                    <i class="fa-solid fa-cart-shopping text-[20px] "></i>
+                    <span class="text-[12px]">Səbətim</span>
+                </a>
+                <a href="./wishlist.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+                    <i class="fa-solid fa-heart text-[20px] "></i>
+                    <span class="text-[12px]">Sevimlilərim</span>
+                </a>
+                <a href="./account.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+                    <i class="fa-solid fa-user text-[20px] "></i>
+                    <span class="text-[12px]">Hesabım</span>
+                </a>
+            </nav>
         </div>
-      </header>
+    </header>
     <main class="w-[1200px] mx-auto pt-[80px] font-poppins">
         <div class="mb-[80px]">
             <a href="account.html" class="opacity-50">Account</a>
@@ -109,9 +109,11 @@
                         </div>
                     </div>
                     <div class="flex space-x-[16px]">
-                        <input type="checkbox" id="save-info-check" class="border-black border size-[24px]  rounded-[4px]">
-                        <label for="save-info-check" class="cursor-pointer">Save this information for faster check-out next time</label>
-                    </div> 
+                        <input type="checkbox" id="save-info-check"
+                            class="border-black border size-[24px]  rounded-[4px]">
+                        <label for="save-info-check" class="cursor-pointer">Save this information for faster check-out
+                            next time</label>
+                    </div>
                 </div>
                 <div class="space-y-[32px] w-[527px]">
                     <div class="space-y-[32px] w-[425px]">
@@ -149,7 +151,7 @@
                         </div>
                     </div>
                     <div class="flex justify-between w-[427px]">
-                        <div class="space-x-[16px] flex items-center "> 
+                        <div class="space-x-[16px] flex items-center ">
                             <input type="radio" name="payment" class="size-[24px]">
                             <span>Bank</span>
                         </div>
@@ -161,23 +163,29 @@
                                 <img class="w-full h-full object-contain" src="./assets/img/visa.png" alt="Visa">
                             </figure>
                             <figure class="w-[42px] h-[28px] px-[2px]">
-                                <img class="w-full h-full object-contain" src="./assets/img/master-card.png" alt="MasterCard">
+                                <img class="w-full h-full object-contain" src="./assets/img/master-card.png"
+                                    alt="MasterCard">
                             </figure>
                             <figure class="w-[42px] h-[28px] px-[2px]">
                                 <img class="w-full h-full object-contain" src="./assets/img/fireball.png" alt="">
                             </figure>
                         </div>
                     </div>
-                    <div class="space-x-[16px] flex items-center "> 
+                    <div class="space-x-[16px] flex items-center ">
                         <input type="radio" name="payment" class="size-[24px]">
                         <span>Cash on delivery</span>
                     </div>
                     <div>
-                        <input type="text" placeholder="Coupon Code" class="px-[24px] border border-black h-[56px] w-[300px] opacity-50 outline-none rounded-[4px] mr-[16px]">
-                        <button class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] hover:bg-[#e07575]">Apply Coupon</button>
+                        <input type="text" placeholder="Coupon Code"
+                            class="px-[24px] border border-black h-[56px] w-[300px] opacity-50 outline-none rounded-[4px] mr-[16px]">
+                        <button
+                            class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] hover:bg-[#e07575]">Apply
+                            Coupon</button>
                     </div>
                     <div>
-                        <button class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] hover:bg-[#e07575]">Place Order</button>
+                        <button
+                            class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] hover:bg-[#e07575]">Place
+                            Order</button>
                     </div>
                 </div>
             </div>
@@ -186,24 +194,39 @@
     <footer class="bg-black">
         <div class="w-[1200px] mx-auto text-white py-[50px] flex justify-between mt-[50px]">
             <div>
-                <div class="space-y-[24px] ">
-                  <a href="./about.html">
-                    <img src="./assets/img/hərşeyburada2.svg" alt="">
-                </a>
-                <h2 class="text-[20px] font-[500]">Subscribe</h2>
-                <h4 class="text-[16px] font-[300]">10% Endirim qazan</h4>
+                <div class="space-y-[24px]">
+                    <a href="./about.html">
+                        <img src="./assets/img/hərşeyburada2.svg" alt="">
+                    </a>
+                    <h2 class="text-[20px] font-[500]">Abunə Olun</h2>
+                    <h4 class="text-[16px] font-[300]">10% Endirim qazan</h4>
                 </div>
-    
-                <div class="mt-[48px] " >
-                  <input class="bg-black outline-none rounded-[4px] border border-white p-[8px]" type="email" placeholder="Enter your email">
+
+                <div class="mt-[48px]">
+                    <input class="bg-black outline-none rounded-[4px] border border-white p-[8px]" type="email"
+                        placeholder="Email daxil edin">
                 </div>
-              </div>
-              
-    
-            <div class="flex flex-col ">
+
+                <div class="flex space-x-[16px] mt-[24px]">
+                    <a href="#" target="_blank">
+                        <i class="text-[20px] fa-brands fa-facebook-f"></i>
+                      </a>
+                      <a href="#" target="_blank">
+                        <i class="text-[20px] fa-brands fa-twitter"></i>
+                      </a>
+                      <a href="https://www.instagram.com/herseyburadaz/" target="_blank">
+                        <i class="text-[20px] fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="#" target="_blank">
+                        <i class="text-[20px] fa-brands fa-linkedin-in"></i>
+                      </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col">
                 <h3 class="font-[500] text-[20px] mb-[24px]">Dəstək</h3>
                 <p class="text-[16px] mb-[16px]">
-                  Bakı, Azərbaycan
+                    Bakı, Azərbaycan
                 </p>
                 <p class="text-[16px] mb-[16px]">
                     <a href="#">herseyburadacomp@gmail.com</a>
@@ -212,8 +235,8 @@
                     <a href="#">+994 (55) 777 88 85</a>
                 </p>
             </div>
-    
-            <div class="flex flex-col ">
+
+            <div class="flex flex-col">
                 <h3 class="font-[500] text-[20px] mb-[24px]">Hesab</h3>
                 <a class="text-[16px] mb-[16px]" href="./account.html">Hesabım</a>
                 <a class="text-[16px] mb-[16px]" href="./signup.html">Daxil ol</a>
@@ -221,28 +244,22 @@
                 <a class="text-[16px] mb-[16px]" href="./wishlist.html">Sevimlilər</a>
                 <a class="text-[16px] mb-[16px]" href="./account.html">Alış-Veriş</a>
             </div>
-    
+
             <div class="flex flex-col">
-                <h3 class="font-[500] text-[20px] mb-[24px]">Quick Link</h3>
-                <a class="text-[16px] mb-[16px]" href="№">Privacy Policy</a>
-                <a class="text-[16px] mb-[16px]" href="№">Terms Of Use</a>
-                <a class="text-[16px] mb-[16px]" href="./contact.html">Contact</a>
-              </div>
-              <div class="flex flex-col space-y-[16px]">
-                  <i class="text-[20px] fa-brands fa-facebook-f"></i>
-                  <i class="text-[20px] fa-brands fa-twitter"></i>
-                  <i class="text-[20px] fa-brands fa-instagram"></i>
-                  <i class="text-[20px] fa-brands fa-linkedin-in"></i>
-              </div>
+                <h3 class="font-[500] text-[20px] mb-[24px]">Tez Link</h3>
+                <a class="text-[16px] mb-[16px]" href="#">Gizlilik Siyasəti</a>
+                <a class="text-[16px] mb-[16px]" href="#">İstifadə Şərtləri</a>
+                <a class="text-[16px] mb-[16px]" href="./contact.html">Əlaqə</a>
+            </div>
         </div>
+
         <div class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px] border-[#141414]">
             <div class="size-[20px]">
                 <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="">
             </div>
-    
-            <div class="text-[16px] text-[#d9d9d9] border-b-[#d7d7d7]">
-                <a href="#" >
-                    Copyright Rimel 2022. All right reserved
+            <div class="text-[16px] text-[#d9d9d9]">
+                <a href="#">
+                    Copyright Rimel 2022. Bütün hüquqlar qorunur
                 </a>
             </div>
         </div>

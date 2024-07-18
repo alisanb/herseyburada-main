@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../account/css/main.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../account/css/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  
+
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
 
@@ -27,162 +27,175 @@
 </head>
 
 <body class="font-body">
-    <header class=" border-b-[1px]">
-        <div class="mt-[10px] w-[1200px] mx-auto flex justify-between items-center py-[20px]">
-          <div class="flex justify-between items-center w-[830px] gap-x-[70px]">
-            <div class="text-[24px] font-logo">
-              <a href="./index.html">
-                <img src="./assets/img/hərşeyburada.svg" alt="">
-            </a>
-            </div>
-    
-            <div
-              class="flex justify-between items-center h-[40px] grow pr-[5px] pl-[14px] rounded-[14px] border">  
-              <input class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow" type="text"
-                placeholder="Nə ilə maraqlanırsınız?">
-                
-                <button class="size-[32px] bg-[#ff9130] rounded-[10px] cursor-pointer text-white inline-flex justify-center items-center ">
-                  <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
-                </button>
-            </div>
+  <header class=" border-b-[1px] sticky top-0 bg-white z-10">
+    <div class="mt-[10px] w-[1200px] mx-auto flex justify-between items-center py-[20px]">
+      <div class="flex justify-between items-center w-[830px] gap-x-[70px]">
+        <div class="text-[24px] font-logo">
+          <a href="./index.html">
+            <img src="./assets/img/hərşeyburada.svg" alt="">
+          </a>
+        </div>
+
+        <div class="flex justify-between items-center h-[40px] grow pr-[5px] pl-[14px] rounded-[14px] border">
+          <input class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow" type="text"
+            placeholder="Nə ilə maraqlanırsınız?">
+
+          <button
+            class="size-[32px] bg-[#ff9130] rounded-[10px] cursor-pointer text-white inline-flex justify-center items-center ">
+            <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
+          </button>
+        </div>
+      </div>
+      <nav class="w-[347px] flex justify-end gap-x-[16px] items-center gap-x-[24px]">
+        <a href="./cart.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+          <i class="fa-solid fa-cart-shopping text-[20px] "></i>
+          <span class="text-[12px]">Səbətim</span>
+        </a>
+        <a href="./wishlist.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+          <i class="fa-solid fa-heart text-[20px] "></i>
+          <span class="text-[12px]">Sevimlilərim</span>
+        </a>
+        <a href="./account.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+          <i class="fa-solid fa-user text-[20px] "></i>
+          <span class="text-[12px]">Hesabım</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content container  text-[14px] ">
+    <p class="text-right my-[80px] mr-[103px]">Xoş Gəlmisiniz! <span class="text-[#FF7518]">Md Rimel</span></p>
+    <div class="flex gap-[100px] mx-[135px]">
+      <aside class="bg-white p-6 rounded-lg shadow-lg">
+        <ul>
+          <li class="mb-4 font-bold text-lg text-[#333]">Hesabını idarə et</li>
+          <li>
+            <ul class="mb-6 space-y-2">
+              <li class="text-[#FF7518] font-semibold cursor-pointer hover:underline">Mənim hesabım</li>
+              <li class="text-gray-600 cursor-pointer hover:text-[#FF7518] hover:underline">Address kitabçam</li>
+              <li class="text-gray-600 cursor-pointer hover:text-[#FF7518] hover:underline">My Payment Options</li>
+            </ul>
+          </li>
+          <li class="font-bold text-lg text-[#333]">Mənim sifarişlərim</li>
+        </ul>
+      </aside>
+
+      <div class="px-8 py-6 lg:px-15 lg:py-10 bg-white rounded-lg shadow-lg"
+        style="box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);">
+        <p class="text-2xl text-[#FF7518] mb-4 font-semibold">Hesabını idarə et</p>
+        <form action="post" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="form-item flex flex-col">
+            <label for="first-name" class="text-lg">First Name</label>
+            <input type="text" id="first-name"
+              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
           </div>
-          <nav class="w-[347px] flex justify-end gap-x-[16px] items-center gap-x-[24px]">
-            <a href="./cart.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-              <i class="fa-solid fa-cart-shopping text-[20px] "></i>
-              <span class="text-[12px]">Səbətim</span>
-            </a>
-            <a href="./wishlist.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-              <i class="fa-solid fa-heart text-[20px] "></i>
-              <span class="text-[12px]">Sevimlilərim</span>
-            </a>
-            <a href="./account.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-              <i class="fa-solid fa-user text-[20px] "></i>
-              <span class="text-[12px]">Hesabım</span>
-            </a>
-          </nav>
+          <div class="form-item flex flex-col">
+            <label for="last-name" class="text-lg">Last Name</label>
+            <input type="text" id="last-name"
+              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
+          </div>
+          <div class="form-item flex flex-col">
+            <label for="email" class="text-lg">Email</label>
+            <input type="email" id="email"
+              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
+          </div>
+          <div class="form-item flex flex-col">
+            <label for="address" class="text-lg">Address</label>
+            <input type="text" id="address"
+              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
+          </div>
+          <div class="form-item col-span-1 lg:col-span-2">
+            <p class="text-lg font-semibold mb-2">Password Changes</p>
+            <input type="password" placeholder="Current Password" id="current-password"
+              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none mb-4 placeholder-opacity-70 placeholder:text-gray-500">
+            <input type="password" placeholder="New Password" id="new-password"
+              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none mb-4 placeholder-opacity-70 placeholder:text-gray-500">
+            <input type="password" placeholder="Confirm New Password" id="confirm-password"
+              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none placeholder-opacity-70 placeholder:text-gray-500">
+          </div>
+          <div class="form-btns flex justify-between lg:justify-end gap-4 col-span-1 lg:col-span-2">
+            <button class="bg-gray-300 text-gray-700 py-2 px-6 rounded-md hover:bg-gray-400">Cancel</button>
+            <button class="bg-[#FF7518] text-white py-2 px-6 lg:py-3 lg:px-12 rounded-md hover:bg-[#e66c13]"
+              type="submit">Save Changes</button>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </main>
+  <footer class="bg-black">
+    <div class="w-[1200px] mx-auto text-white py-[50px] flex justify-between mt-[50px]">
+      <div>
+        <div class="space-y-[24px]">
+          <a href="./about.html">
+            <img src="./assets/img/hərşeyburada2.svg" alt="">
+          </a>
+          <h2 class="text-[20px] font-[500]">Abunə Olun</h2>
+          <h4 class="text-[16px] font-[300]">10% Endirim qazan</h4>
         </div>
-      </header>
-    <main class="main-content container  text-[14px] ">
-        <p class="text-right my-[80px] mr-[103px]">Xoş Gəlmisiniz! <span class="text-[#FF7518]">Md Rimel</span></p>
-        <div class="flex gap-[100px] mx-[135px]">
-            <aside class="">
-                <ul>
-                    <li class="mb-[16px] font-bold">Hesabını idarə et</li>
-                    <li>
-                        <ul class="ml-[35px] mb-[24px]">
-                            <li class="text-[#FF7518]">Mənim hesabım</li>
-                            <li class="opacity-70">Address kitabçam</li>
-                            <li class="opacity-70">My Payment Options</li>
-                        </ul>
-                    </li>
-                    <li class="font-bold">Mənim sifarişlərim</li>
-                </ul>
-            </aside>
-            <div class="px-[80px] py-[40px]" style="box-shadow: 0px 1px 13px 0px #0000000D;">
-                <p class="text-[20px] text-[#FF7518] mb-[16px] font-[500]">Hesabını idarə et</p>
-                <form action="post" class="grid grid-cols-2 justify-center gap-y-[24px] gap-x-[50px]">
-                    <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
-                        <label for="first-name" class="text-[16px]">First Name</label>
-                        <input type="text" id="first-name"
-                            class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
-                    </div>
-                    <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
-                        <label for="last-name" class="text-[16px]">Last Name</label>
-                        <input type="text" id="last-name"
-                            class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
-                    </div>
-                    <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
-                        <label for="email" class="text-[16px]">Email</label>
-                        <input type="email" id="email"
-                            class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
-                    </div>
-                    <div class="form-item flex flex-col col-span-2 lg:col-span-1 gap-[8px]">
-                        <label for="address" class="text-[16px]">Address</label>
-                        <input type="text" id="address"
-                            class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0">
-                    </div>
-                    <div class="form-item col-span-2">
-                        <p>Password Changes</p>
-                        <input type="password" placeholder="Current Password" id="last-name"
-                            class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0 mb-[16px] placeholder:opacity-70 placeholder:text-[#000000]">
-                        <input type="password" placeholder="New Password" id="last-name"
-                            class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0 mb-[16px] placeholder:opacity-70 placeholder:text-[#000000]">
-                        <input type="password" placeholder="Confirm New Password" id="last-name"
-                            class="bg-[#F5F5F5] min-w-[200px] w-[100%] h-[50px] rounded-[4px] outline-0 placeholder:opacity-70 placeholder:text-[#000000]">
-                    </div>
-                    <div class="form-btns flex lg:justify-self-end gap-[32px] col-span-2">
-                        <button class="">Cancel</button>
-                        <button class="bg-[#FF7518] lg:py-[16px] lg:px-[48px] py-[8px] px-[24px] text-[#fff]"
-                            type="submit">Save Changes</button>
-                    </div>
-                </form>
-            </div>
+
+        <div class="mt-[48px]">
+          <input class="bg-black outline-none rounded-[4px] border border-white p-[8px]" type="email"
+            placeholder="Email daxil edin">
         </div>
-    </main>
-    <footer class="bg-black">
-        <div class="w-[1200px] mx-auto text-white py-[50px] flex justify-between mt-[50px]">
-            <div>
-                <div class="space-y-[24px] ">
-                  <a href="./about.html">
-                    <img src="./assets/img/hərşeyburada2.svg" alt="">
-                </a>
-                <h2 class="text-[20px] font-[500]">Subscribe</h2>
-                <h4 class="text-[16px] font-[300]">10% Endirim qazan</h4>
-                </div>
-    
-                <div class="mt-[48px] " >
-                  <input class="bg-black outline-none rounded-[4px] border border-white p-[8px]" type="email" placeholder="Enter your email">
-                </div>
-              </div>
-              
-    
-            <div class="flex flex-col ">
-                <h3 class="font-[500] text-[20px] mb-[24px]">Dəstək</h3>
-                <p class="text-[16px] mb-[16px]">
-                  Bakı, Azərbaycan
-                </p>
-                <p class="text-[16px] mb-[16px]">
-                    <a href="#">herseyburadacomp@gmail.com</a>
-                </p>
-                <p class="text-[16px] mb-[16px]">
-                    <a href="#">+994 (55) 777 88 85</a>
-                </p>
-            </div>
-    
-            <div class="flex flex-col ">
-                <h3 class="font-[500] text-[20px] mb-[24px]">Hesab</h3>
-                <a class="text-[16px] mb-[16px]" href="./account.html">Hesabım</a>
-                <a class="text-[16px] mb-[16px]" href="./signup.html">Daxil ol</a>
-                <a class="text-[16px] mb-[16px]" href="./cart.html">Səbətim</a>
-                <a class="text-[16px] mb-[16px]" href="./wishlist.html">Sevimlilər</a>
-                <a class="text-[16px] mb-[16px]" href="./account.html">Alış-Veriş</a>
-            </div>
-    
-            <div class="flex flex-col">
-                <h3 class="font-[500] text-[20px] mb-[24px]">Quick Link</h3>
-                <a class="text-[16px] mb-[16px]" href="№">Privacy Policy</a>
-                <a class="text-[16px] mb-[16px]" href="№">Terms Of Use</a>
-                <a class="text-[16px] mb-[16px]" href="./contact.html">Contact</a>
-              </div>
-              <div class="flex flex-col space-y-[16px]">
-                  <i class="text-[20px] fa-brands fa-facebook-f"></i>
-                  <i class="text-[20px] fa-brands fa-twitter"></i>
-                  <i class="text-[20px] fa-brands fa-instagram"></i>
-                  <i class="text-[20px] fa-brands fa-linkedin-in"></i>
-              </div>
+
+        <div class="flex space-x-[16px] mt-[24px]">
+          <a href="#" target="_blank">
+            <i class="text-[20px] fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="text-[20px] fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/herseyburadaz/" target="_blank">
+            <i class="text-[20px] fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="text-[20px] fa-brands fa-linkedin-in"></i>
+          </a>
         </div>
-        <div class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px] border-[#141414]">
-            <div class="size-[20px]">
-                <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="">
-            </div>
-    
-            <div class="text-[16px] text-[#d9d9d9] border-b-[#d7d7d7]">
-                <a href="#" >
-                    Copyright Rimel 2022. All right reserved
-                </a>
-            </div>
-        </div>
-    </footer>
+      </div>
+
+      <div class="flex flex-col">
+        <h3 class="font-[500] text-[20px] mb-[24px]">Dəstək</h3>
+        <p class="text-[16px] mb-[16px]">
+          Bakı, Azərbaycan
+        </p>
+        <p class="text-[16px] mb-[16px]">
+          <a href="#">herseyburadacomp@gmail.com</a>
+        </p>
+        <p class="text-[16px] mb-[16px]">
+          <a href="#">+994 (55) 777 88 85</a>
+        </p>
+      </div>
+
+      <div class="flex flex-col">
+        <h3 class="font-[500] text-[20px] mb-[24px]">Hesab</h3>
+        <a class="text-[16px] mb-[16px]" href="./account.html">Hesabım</a>
+        <a class="text-[16px] mb-[16px]" href="./signup.html">Daxil ol</a>
+        <a class="text-[16px] mb-[16px]" href="./cart.html">Səbətim</a>
+        <a class="text-[16px] mb-[16px]" href="./wishlist.html">Sevimlilər</a>
+        <a class="text-[16px] mb-[16px]" href="./account.html">Alış-Veriş</a>
+      </div>
+
+      <div class="flex flex-col">
+        <h3 class="font-[500] text-[20px] mb-[24px]">Tez Link</h3>
+        <a class="text-[16px] mb-[16px]" href="#">Gizlilik Siyasəti</a>
+        <a class="text-[16px] mb-[16px]" href="#">İstifadə Şərtləri</a>
+        <a class="text-[16px] mb-[16px]" href="./contact.html">Əlaqə</a>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px] border-[#141414]">
+      <div class="size-[20px]">
+        <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="">
+      </div>
+      <div class="text-[16px] text-[#d9d9d9]">
+        <a href="#">
+          Copyright Rimel 2022. Bütün hüquqlar qorunur
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
