@@ -63,76 +63,71 @@
     </div>
   </header>
   <main class="w-[1200px] mx-auto pt-[80px] font-poppins">
-    <div class="mb-[80px]">
-      <a href="index.html" class="opacity-50">Home</a>
-      <span class="opacity-50 mx-[12px]">/</span>
-      <a href="cart.html">Cart</a>
+    <div class="mb-[80px] text-gray-500">
+      <a href="index.html" class="hover:text-black transition-colors duration-200">Home</a>
+      <span class="mx-[12px]">/</span>
+      <a href="cart.html" class="hover:text-black text-black transition-colors duration-200">Cart</a>
     </div>
     <div class="mb-[80px]">
       <div class="px-10 space-y-[40px]">
-        <div class="grid grid-cols-4 gap-[15rem] items-center h-[72px]">
+        <div class="grid grid-cols-4 gap-[15rem] items-center h-[72px] font-semibold">
           <div>Product</div>
           <div>Price</div>
           <div>Quantity</div>
           <div class="text-right">Subtotal</div>
         </div>
-        <div class="grid grid-cols-4 gap-[15rem] h-[102px] items-center">
+        <div class="grid grid-cols-4 gap-[15rem] h-[102px] items-center border-b border-gray-200 pb-[16px]">
           <div class="flex items-center">
-            <figure class="px-[2px] py-[8px] mr-[24px]  size-[54px] shrink-0">
+            <figure class="px-[2px] py-[8px] mr-[24px] w-[54px] h-[54px] shrink-0">
               <img class="w-full h-full object-contain" src="./assets/img/monitor.png" alt="LCD Monitor">
             </figure>
             <span class="shrink-0">LCD Monitor</span>
           </div>
           <div>$650</div>
-          <div class="border border-black/40 rounded-[4px] w-[72px] h-[44px] px-[12px] flex items-center">
-            <span class="mr-[16px]">01</span>
-            <div class="">
-              <button class="size-[16px]"><i class="fa-solid fa-chevron-up text-[11px]"></i></button>
-              <button class="size-[16px]"><i class="fa-solid fa-chevron-down text-[11px]"></i></button>
+          <div class="border border-gray-300 rounded-[4px] w-[72px] h-[44px] px-[12px] flex items-center justify-between">
+            <span>01</span>
+            <div class="flex flex-col">
+              <button class="text-gray-600 hover:text-black transition-colors duration-200"><i class="fa-solid fa-chevron-up text-[11px]"></i></button>
+              <button class="text-gray-600 hover:text-black transition-colors duration-200"><i class="fa-solid fa-chevron-down text-[11px]"></i></button>
             </div>
           </div>
           <div class="text-right">$650</div>
         </div>
-        <div class="grid grid-cols-4 gap-[15rem] h-[102px] items-center">
+        <div class="grid grid-cols-4 gap-[15rem] h-[102px] items-center border-b border-gray-200 pb-[16px]">
           <div class="flex items-center">
-            <figure class="px-[2px] py-[8px] mr-[24px] size-[54px] shrink-0">
+            <figure class="px-[2px] py-[8px] mr-[24px] w-[54px] h-[54px] shrink-0">
               <img class="w-full h-full object-contain" src="./assets/img/gamepad.png" alt="H1 Gamepad">
             </figure>
             <span class="shrink-0">H1 Gamepad</span>
           </div>
           <div>$550</div>
-          <div class="border border-black/40 rounded-[4px] w-[72px] h-[44px] px-[12px] flex items-center">
-            <span class="mr-[16px]">01</span>
-            <div class="">
-              <button class="size-[16px]"><i class="fa-solid fa-chevron-up text-[11px]"></i></button>
-              <button class="size-[16px]"><i class="fa-solid fa-chevron-down text-[11px]"></i></button>
+          <div class="border border-gray-300 rounded-[4px] w-[72px] h-[44px] px-[12px] flex items-center justify-between">
+            <span>01</span>
+            <div class="flex flex-col">
+              <button class="text-gray-600 hover:text-black transition-colors duration-200"><i class="fa-solid fa-chevron-up text-[11px]"></i></button>
+              <button class="text-gray-600 hover:text-black transition-colors duration-200"><i class="fa-solid fa-chevron-down text-[11px]"></i></button>
             </div>
           </div>
           <div class="text-right">$1100</div>
         </div>
-
       </div>
       <div class="mt-[24px] flex justify-between">
-        <a href="index.html" class="border border-black/50 rounded-[4px] px-[48px] py-[16px] font-medium ">Return To
-          Shop</a>
-        <a href="#" class="border border-black/50 rounded-[4px] px-[48px] py-[16px] font-medium ">Update
-          Cart</a>
+        <a href="index.html" class="border border-black/50 rounded-[4px] px-[48px] py-[16px] font-medium hover:bg-gray-100 transition-colors duration-200">Return To Shop</a>
+        <a href="#" class="border border-black/50 rounded-[4px] px-[48px] py-[16px] font-medium hover:bg-gray-100 transition-colors duration-200">Update Cart</a>
       </div>
     </div>
     <div class="flex justify-between">
       <div>
-        <input type="text" placeholder="Coupon Code"
-          class="px-[24px] border border-black h-[56px] w-[300px] opacity-50 outline-none rounded-[4px] mr-[16px]">
-        <button class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] hover:bg-[#e07575]">Apply
-          Coupon</button>
+        <input type="text" placeholder="Coupon Code" class="px-[24px] border border-gray-300 h-[56px] w-[300px] opacity-75 outline-none rounded-[4px] mr-[16px] placeholder-gray-500">
+        <button class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518]  transition-colors duration-200">Apply Coupon</button>
       </div>
-      <div class="w-[470px] h-[324px] border border-black rounded-[4px] space-y-[16px]  px-[32px] py-[24px]">
+      <div class="w-[470px] h-[324px] border border-gray-300 rounded-[4px] space-y-[16px] px-[32px] py-[24px] bg-gray-50">
         <h3 class="font-medium text-[24px] mb-[24px]">Cart Total</h3>
-        <div class="flex justify-between border-b border-black/40 pb-[16px]">
+        <div class="flex justify-between border-b border-gray-200 pb-[16px]">
           <span>Subtotal:</span>
           <span>$1750</span>
         </div>
-        <div class="flex justify-between border-b border-black/40 pb-[16px]">
+        <div class="flex justify-between border-b border-gray-200 pb-[16px]">
           <span>Shipping:</span>
           <span>Free</span>
         </div>
@@ -142,9 +137,7 @@
         </div>
         <div class="flex justify-center">
           <a href="./checkout.html">
-            <button
-              class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] font-medium hover:bg-[#e07575]">Procees
-              to checkout</button>
+            <button class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518] font-medium  transition-colors duration-200">Proceed to Checkout</button>
           </a>
         </div>
       </div>
@@ -167,16 +160,16 @@
         </div>
 
         <div class="flex space-x-[16px] mt-[24px]">
-          <a href="#">
+          <a href="#" target="_blank">
             <i class="text-[20px] fa-brands fa-facebook-f"></i>
           </a>
-          <a href="#">
+          <a href="#" target="_blank">
             <i class="text-[20px] fa-brands fa-twitter"></i>
           </a>
-          <a href="https://www.instagram.com/herseyburadaz/">
+          <a href="https://www.instagram.com/herseyburadaz/" target="_blank">
             <i class="text-[20px] fa-brands fa-instagram"></i>
           </a>
-          <a href="#">
+          <a href="#" target="_blank">
             <i class="text-[20px] fa-brands fa-linkedin-in"></i>
           </a>
         </div>
