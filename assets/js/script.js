@@ -4,8 +4,13 @@ let dropdown = document.querySelector("#dropdown")
 
 account.addEventListener("click", (e) => {
     e.stopPropagation();
-    dropdown.classList.remove("hidden")
-    dropdown.classList.add("flex")
+    if (dropdown.classList.contains("hidden")) {
+      dropdown.classList.remove("hidden");
+      dropdown.classList.add("flex");
+  } else {
+      dropdown.classList.remove("flex");
+      dropdown.classList.add("hidden");
+  }
 
 })
 document.addEventListener("click", async () =>  {
@@ -14,7 +19,6 @@ document.addEventListener("click", async () =>  {
         dropdown.classList.add("hidden")
     }
 })
-=======
 const decrease = document.querySelector("#decrease");
 const increase = document.querySelector("#increase");
 const countElement = document.querySelector("#count");
