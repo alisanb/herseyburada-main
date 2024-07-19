@@ -67,17 +67,17 @@
               <img src="assets/img/Icon-user.svg" class="size-[22px] w-[20%] mr-2" alt="">
               <span class="text-left w-[80%]">Hesabımın idarəsi</span>
             </a>
-            <a href="./my-orders.html"
+            <a href="#"
               class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
               <img src="assets/img/Icon-mallbag.svg" alt="" class="size-[24px] w-[20%] mr-2">
               <span class="text-left w-[80%]">Mənim sifarişlərim</span>
             </a>
-            <a href="./customer-service.html"
+            <a href="#"
               class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
               <img src="assets/img/Icon-service.svg" alt="" class="size-[21px] w-[20%] mr-2">
               <span class="text-left w-[80%]">Müştəri xidməti</span>
             </a>
-            <a href="./my-reviews.html"
+            <a href="#"
               class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> <img
                 src="assets/img/Icon-Reviews.svg" alt="" class="size-[25px] w-[20%] mr-2">
               <span class="text-left w-[80%]">Mənim rəylərim</span>
@@ -116,17 +116,18 @@
             <span class="shrink-0">LCD Monitor</span>
           </div>
           <div><span class="prices">$650</span></div>
-          <div
-            class="border border-gray-300 rounded-[4px] w-[72px] h-[44px] px-[12px] flex items-center justify-between">
+          <div class="countDivCart border border-gray-300 rounded-[4px] w-[72px] h-[44px] px-[12px] flex items-center justify-between">
             <span class="countElementCart text-center w-full">1</span>
-            <div class="flex flex-col">
-              <button class="cartDecrease text-gray-600 hover:text-black transition-colors duration-200"><i
-                  class="fa-solid fa-chevron-up text-[11px]"></i></button>
-              <button class="cartIncrease text-gray-600 hover:text-black transition-colors duration-200"><i
-                  class="fa-solid fa-chevron-down text-[11px]"></i></button>
+            <div class="flex flex-col justify-center w-[16px] h-[32px]">
+              <button class="cartIncrease text-gray-600 h-[16px] w-full hover:text-black transition-colors duration-200">
+                <i class="fa-solid fa-chevron-up text-[13px]"></i>
+              </button>
+              <button class="cartDecrease text-gray-600 hover:text-black transition-colors duration-200">
+                <i class="fa-solid fa-chevron-down text-[13px]"></i>
+              </button>
             </div>
           </div>
-          <div class="text-right"><span class="prices">$650</span></div>
+          <div class="text-right"><span class="subtotal">$650</span></div>
         </div>
         <div
           class="grid grid-cols-4 rounded-[4px] gap-[15rem] h-[102px] items-center border border-gray-100 shadow-sm px-[40px]">
@@ -137,17 +138,18 @@
             <span class="shrink-0">H1 Gamepad</span>
           </div>
           <div><span class="prices">$550</span></div>
-          <div
-            class="border border-gray-300 rounded-[4px]  w-[72px] h-[44px] px-[12px] flex items-center justify-between">
-            <span class="countElementCart text-center w-full">2</span>
-            <div class="flex flex-col">
-              <button class="cartDecrease text-gray-600 hover:text-black transition-colors duration-200"><i
-                  class="fa-solid fa-chevron-up text-[11px]"></i></button>
-              <button class="cartIncrease text-gray-600 hover:text-black transition-colors duration-200"><i
-                  class="fa-solid fa-chevron-down text-[11px]"></i></button>
+          <div class="countDivCart border border-gray-300 rounded-[4px] w-[72px] h-[44px] px-[12px] flex items-center justify-between">
+            <span class="countElementCart text-center w-full">1</span>
+            <div class="flex flex-col justify-center w-[16px] h-[32px]">
+              <button class="cartIncrease text-gray-600 h-[16px] w-full hover:text-black transition-colors duration-200">
+                <i class="fa-solid fa-chevron-up text-[13px]"></i>
+              </button>
+              <button class="cartDecrease text-gray-600 hover:text-black transition-colors duration-200">
+                <i class="fa-solid fa-chevron-down text-[13px]"></i>
+              </button>
             </div>
           </div>
-          <div class="text-right"><span class="prices">$1100</span></div>
+          <div class="text-right"><span class="subtotal">$550</span></div>
         </div>
       </div>
       <div class="mt-[24px] flex justify-between">
@@ -161,26 +163,27 @@
     </div>
     <div class="flex justify-between">
       <div>
-        <input type="text" placeholder="Coupon Code"
-          class="px-[24px] border border-gray-300 h-[56px] w-[300px] opacity-75 outline-none rounded-[4px] mr-[16px] placeholder-gray-500">
-        <button
-          class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518]  transition-colors hover:bg-[#e07575] duration-200">Apply
-          Coupon</button>
+        <input type="text" id="coupon-code" placeholder="Coupon Code"
+        class="px-[24px] border border-gray-300 h-[56px] w-[300px] opacity-75 outline-none rounded-[4px] mr-[16px] placeholder-gray-500">
+        <button id="apply-coupon"
+        class="px-[48px] py-[16px] rounded-[4px] text-white bg-[#ff7518]  transition-colors hover:bg-[#e07575] duration-200">Apply
+        Coupon</button>
+        <p class="mt-4 text-gray-400"><span id="coupon-text">"BURADA"</span> kodundan istifadə edərək çatdırılmanı pulsuz et</p>
       </div>
       <div
         class="w-[470px] h-[324px] border border-gray-300 rounded-[4px] space-y-[16px] px-[32px] py-[24px] bg-gray-50">
         <h3 class="font-medium text-[24px] mb-[24px]">Cart Total</h3>
         <div class="flex justify-between border-b border-gray-200 pb-[16px]">
           <span>Subtotal:</span>
-          <span>$1750</span>
+          <span id="subtotal"></span>
         </div>
         <div class="flex justify-between border-b border-gray-200 pb-[16px]">
           <span>Shipping:</span>
-          <span>Free</span>
+          <span id="shipping">$25.00</span>
         </div>
         <div class="flex justify-between pb-[16px]">
           <span>Total:</span>
-          <span>$1750</span>
+          <span id="total"></span>
         </div>
         <div class="flex justify-center">
           <a href="./checkout.html">
@@ -261,8 +264,53 @@
       </div>
     </div>
   </footer>
+    document.addEventListener('DOMContentLoaded', function() {
+  const cartItems = document.querySelectorAll('.border.border-gray-300.rounded-\\[4px\\]');
 
-  <script src="assets/js/script.js"></script>
+  cartItems.forEach(item => {
+    const countElement = item.querySelector('.countElementCart');
+    const increaseButton = item.querySelector('.cartIncrease');
+    const decreaseButton = item.querySelector('.cartDecrease');
+
+    increaseButton.addEventListener('click', () => {
+      let count = parseInt(countElement.textContent);
+      count++;
+      countElement.textContent = count;
+      updateSubtotal(item, count);
+    });
+
+    decreaseButton.addEventListener('click', () => {
+      let count = parseInt(countElement.textContent);
+      if (count > 1) {
+        count--;
+        countElement.textContent = count;
+        updateSubtotal(item, count);
+      }
+    });
+  });
+
+  function updateSubtotal(item, count) {
+    const priceElement = item.closest('.grid').querySelector('.prices');
+    const subtotalElement = item.closest('.grid').querySelectorAll('.prices')[1];
+    const price = parseFloat(priceElement.textContent.replace('$', ''));
+    const subtotal = price * count;
+    subtotalElement.textContent = '$' + subtotal.toFixed(2);
+    updateTotal();
+  }
+
+  function updateTotal() {
+    const subtotals = document.querySelectorAll('.grid .prices:last-child');
+    let total = 0;
+    subtotals.forEach(subtotal => {
+      total += parseFloat(subtotal.textContent.replace('$', ''));
+    });
+    document.querySelector('.total').textContent = '$' + total.toFixed(2);
+  }
+});
+
+  </script> -->
+
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
