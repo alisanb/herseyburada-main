@@ -35,11 +35,11 @@
                         <img src="./assets/img/hərşeyburada.svg" alt="">
                     </a>
                 </div>
-
+    
                 <div class="flex justify-between items-center h-[40px] grow pr-[5px] pl-[14px] rounded-[14px] border">
                     <input class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow" type="text"
                         placeholder="Nə ilə maraqlanırsınız?">
-
+    
                     <button
                         class="size-[32px] bg-[#ff9130] rounded-[10px] cursor-pointer text-white inline-flex justify-center items-center ">
                         <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
@@ -55,10 +55,32 @@
                     <i class="fa-solid fa-heart text-[20px] "></i>
                     <span class="text-[12px]">Sevimlilərim</span>
                 </a>
-                <a href="./account.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-                    <i class="fa-solid fa-user text-[20px] "></i>
-                    <span class="text-[12px]">Hesabım</span>
-                </a>
+                <div class="flex flex-col relative ">
+                    <div id="account" class="inline-flex cursor-pointer items-center gap-x-[5px] hover:text-[#ff7518]">
+                        <i class="fa-solid fa-user text-[20px] "></i>
+                        <span class="text-[12px]">Hesabım</span>
+                    </div>
+                    <div id="dropdown"  class="absolute flex-col justify-start right-0 top-3 hidden w-[200px] bg-white shadow-lg rounded-lg mt-2 py-2">
+                        <a href="./account.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
+                          <img src="assets/img/Icon-user.svg" class="size-[22px] w-[20%] mr-2" alt=""> 
+                          <span class="text-left w-[80%]">Hesabımın idarəsi</span>
+                        </a>
+                        <a href="./my-orders.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
+                          <img src="assets/img/Icon-mallbag.svg" alt="" class="size-[24px] w-[20%] mr-2"> 
+                          <span class="text-left w-[80%]">Mənim sifarişlərim</span>
+                        </a>
+                        <a href="./customer-service.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> 
+                          <img src="assets/img/Icon-service.svg" alt="" class="size-[21px] w-[20%] mr-2"> 
+                          <span class="text-left w-[80%]">Müştəri xidməti</span>
+                        </a>
+                        <a href="./my-reviews.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> <img src="assets/img/Icon-Reviews.svg" alt="" class="size-[25px] w-[20%] mr-2"> 
+                          <span class="text-left w-[80%]">Mənim rəylərim</span>
+                        </a>
+                        <a href="./login.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> <img src="assets/img/Icon-logout.svg" alt="" class="size-[24px] w-[20%] mr-2">
+                          <span class="text-left w-[80%]">Çıxış et</span> 
+                        </a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -238,6 +260,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
