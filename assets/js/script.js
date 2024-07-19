@@ -14,7 +14,6 @@ document.addEventListener("click", async () =>  {
         dropdown.classList.add("hidden")
     }
 })
-=======
 const decrease = document.querySelector("#decrease");
 const increase = document.querySelector("#increase");
 const countElement = document.querySelector("#count");
