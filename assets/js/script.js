@@ -36,6 +36,7 @@ class Counter {
         like.classList.add("fa-regular");
         like.classList.remove("fa-solid");
       }
+      
     });
   }
 }
