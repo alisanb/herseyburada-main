@@ -62,9 +62,9 @@
       </nav>
     </div>
   </header>
-  <main class="main-content container  text-[14px] ">
-    <p class="text-right my-[80px] mr-[103px]">Xoş Gəlmisiniz! <span class="text-[#FF7518]">Md Rimel</span></p>
-    <div class="flex gap-[100px] mx-[135px]">
+  <main class="main-content w-[1200px] pt-[40px] mx-auto  text-[14px] ">
+    <p class="text-right mb-[40px]">Xoş Gəlmisiniz! <span class="text-[#FF7518]">Md Rimel</span></p>
+    <div class="flex justify-between">
       <aside class="bg-white p-6 rounded-lg shadow-lg">
         <ul>
           <li class="mb-4 font-bold text-lg text-[#333]">Hesabını idarə et</li>
@@ -79,43 +79,45 @@
         </ul>
       </aside>
 
-      <div class="px-8 py-6 lg:px-15 lg:py-10 bg-white rounded-lg shadow-lg"
+      <div class="px-[80px] w-[870px] py-6 lg:px-15 lg:py-10 bg-white rounded-lg shadow-lg"
         style="box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);">
         <p class="text-2xl text-[#FF7518] mb-4 font-semibold">Hesabını idarə et</p>
         <form action="post" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="form-item flex flex-col">
             <label for="first-name" class="text-lg">First Name</label>
             <input type="text" id="first-name"
-              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
+              class="bg-[#F5F5F5] w-[330px] h-[50px] rounded-md px-4 outline-none  ">
           </div>
           <div class="form-item flex flex-col">
             <label for="last-name" class="text-lg">Last Name</label>
             <input type="text" id="last-name"
-              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
+              class="bg-[#F5F5F5] w-[330px] h-[50px] rounded-md px-4 outline-none  ">
           </div>
           <div class="form-item flex flex-col">
             <label for="email" class="text-lg">Email</label>
             <input type="email" id="email"
-              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
+              class="bg-[#F5F5F5] w-[330px] h-[50px] rounded-md px-4 outline-none  ">
           </div>
           <div class="form-item flex flex-col">
             <label for="address" class="text-lg">Address</label>
             <input type="text" id="address"
-              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none  ">
+              class="bg-[#F5F5F5] w-[330px] h-[50px] rounded-md px-4 outline-none  ">
           </div>
-          <div class="form-item col-span-1 lg:col-span-2">
+          <div>
             <p class="text-lg font-semibold mb-2">Password Changes</p>
-            <input type="password" placeholder="Current Password" id="current-password"
-              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none mb-4 placeholder-opacity-70 placeholder:text-gray-500">
-            <input type="password" placeholder="New Password" id="new-password"
-              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none mb-4 placeholder-opacity-70 placeholder:text-gray-500">
-            <input type="password" placeholder="Confirm New Password" id="confirm-password"
-              class="bg-[#F5F5F5] min-w-[200px] w-full h-12 rounded-md px-4 outline-none placeholder-opacity-70 placeholder:text-gray-500">
-          </div>
-          <div class="form-btns flex justify-between lg:justify-end gap-4 col-span-1 lg:col-span-2">
-            <button class="bg-gray-300 text-gray-700 py-2 px-6 rounded-md hover:bg-gray-400">Cancel</button>
-            <button class="bg-[#FF7518] text-white py-2 px-6 lg:py-3 lg:px-12 rounded-md hover:bg-[#e66c13]"
-              type="submit">Save Changes</button>
+            <div class="form-item w-[740px] grid grid-rows-2 grid-flow-col">
+              <input type="password" placeholder="Current Password" id="current-password"
+                class="bg-[#F5F5F5] w-[330px] h-[50px] rounded-md px-4 outline-none mb-4 placeholder-opacity-70 placeholder:text-gray-500">
+              <input type="password" placeholder="New Password" id="new-password"
+                class="bg-[#F5F5F5] w-[330px] h-[50px] rounded-md px-4 outline-none mb-4 placeholder-opacity-70 placeholder:text-gray-500">
+              <input type="password" placeholder="Confirm New Password" id="confirm-password"
+                class="bg-[#F5F5F5] w-[330px] h-[50px] rounded-md px-4 outline-none placeholder-opacity-70 placeholder:text-gray-500">
+            </div>
+            <div class="form-btns flex justify-between lg:justify-end gap-4 col-span-1 lg:col-span-2">
+              <button class="bg-gray-300 text-gray-700 py-2 px-6 rounded-md hover:bg-gray-400">Cancel</button>
+              <button class="bg-[#FF7518] text-white py-2 px-6 lg:py-3 lg:px-12 rounded-md hover:bg-[#e66c13]"
+                type="submit">Save Changes</button>
+            </div>
           </div>
         </form>
       </div>
