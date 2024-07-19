@@ -1,1405 +1,2936 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HerseyBurada</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        fontFamily: {
-          'body': ['Poppins', '"sans-serif"'],
-          'logo': ['Comfortaa', '"sans-serif"']
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Poppins", '"sans-serif"'],
+            logo: ["Comfortaa", '"sans-serif"'],
+          },
         },
-      }
-    }
-  </script>
-</head>
+      };
+    </script>
+  </head>
 
-<body class="font-body">
-  <!-- HEADER -->
-  <header class=" border-b-[1px] sticky top-0 bg-white z-10">
-    <div class="mt-[10px] w-[1200px] mx-auto flex justify-between items-center py-[20px]">
-        <div class="flex justify-between items-center w-[830px] gap-x-[70px]">
-            <div class="text-[24px] font-logo">
-                <a href="./index.html">
-                    <img src="./assets/img/hərşeyburada.svg" alt="">
-                </a>
+  <body class="font-body">
+    <!-- HEADER -->
+    <header class="border-b-[1px] sticky top-0 bg-white z-10">
+      <div class="mt-[10px] w-[1200px] mx-auto flex justify-between items-center py-[20px]">
+          <div class="flex justify-between items-center w-[830px] gap-x-[70px]">
+              <div class="text-[24px] font-logo">
+                  <a href="./index.html">
+                      <img src="./assets/img/hərşeyburada.svg" alt="">
+                  </a>
+              </div>
+  
+              <div class="flex justify-between items-center h-[40px] grow pr-[5px] pl-[14px] rounded-[14px] border">
+                  <input class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow" type="text"
+                      placeholder="Nə ilə maraqlanırsınız?">
+  
+                  <a href="./filter.html"
+                      class="size-[32px] bg-[#ff9130] rounded-[10px] cursor-pointer text-white inline-flex justify-center items-center ">
+                      <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
+                  </a>
+              </div>
+          </div>
+          <nav class="w-[347px] flex justify-end gap-x-[16px] items-center gap-x-[24px]">
+              <a href="./cart.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+                  <i class="fa-solid fa-cart-shopping text-[20px] "></i>
+                  <span class="text-[12px]">Səbətim</span>
+              </a>
+              <a href="./wishlist.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
+                  <i class="fa-solid fa-heart text-[20px] "></i>
+                  <span class="text-[12px]">Sevimlilərim</span>
+              </a>
+              <div class="flex flex-col relative ">
+                  <div id="account" class="inline-flex cursor-pointer items-center gap-x-[5px] hover:text-[#ff7518]">
+                      <i class="fa-solid fa-user text-[20px] "></i>
+                      <span class="text-[12px]">Hesabım</span>
+                  </div>
+                  <div id="dropdown"  class="absolute flex-col justify-start right-0 top-3 hidden w-[200px] bg-white shadow-lg rounded-lg mt-2 py-2">
+                      <a href="./account.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
+                        <img src="assets/img/Icon-user.svg" class="size-[22px] w-[20%] mr-2" alt=""> 
+                        <span class="text-left w-[80%]">Hesabımın idarəsi</span>
+                      </a>
+                      <a href="./my-orders.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
+                        <img src="assets/img/Icon-mallbag.svg" alt="" class="size-[24px] w-[20%] mr-2"> 
+                        <span class="text-left w-[80%]">Mənim sifarişlərim</span>
+                      </a>
+                      <a href="./customer-service.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> 
+                        <img src="assets/img/Icon-service.svg" alt="" class="size-[21px] w-[20%] mr-2"> 
+                        <span class="text-left w-[80%]">Müştəri xidməti</span>
+                      </a>
+                      <a href="./my-reviews.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> <img src="assets/img/Icon-Reviews.svg" alt="" class="size-[25px] w-[20%] mr-2"> 
+                        <span class="text-left w-[80%]">Mənim rəylərim</span>
+                      </a>
+                      <a href="./login.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> <img src="assets/img/Icon-logout.svg" alt="" class="size-[24px] w-[20%] mr-2">
+                        <span class="text-left w-[80%]">Çıxış et</span> 
+                      </a>
+                  </div>
+              </div>
+          </nav>
+      </div>
+  </header>
+    <!-- HEADER -->
+    <div class="w-[1200px] mx-auto">
+      <div class="mt-[40px] mb-[100px] flex justify-between">
+        <!-- LEFTBOX -->
+        <div class="mr-[16px] w-[217px] relative h-[344px]">
+          <ul>
+            <!-- list item with dropdown -->
+
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+                Woman's Fashion
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Dresses
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Tops & Blouses
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Skirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets & Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Lingerie
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Accessories
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Leggings
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overalls
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Ponchos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Romper
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Tunics
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Wraps
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Kaftans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Culottes
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Playsuits
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <div class="flex justify-between items-center h-[40px] grow pr-[5px] pl-[14px] rounded-[14px] border">
-                <input class="bg-transparent placeholder-black opacity-50 outline-none text-sm grow" type="text"
-                    placeholder="Nə ilə maraqlanırsınız?">
+            <!-- Other list items without dropdown -->
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+                Men's Fashion
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+                Electronics
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+                Home&Lifestyle
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+                Medicine
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+                Sports&Outdoor
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+              Baby's&Toys
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+              Health&Beauty
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-[16px] group">
+              <li
+                class="text-[16px] text-center text-[#000000] font-normal cursor-pointer"
+              >
+              Pets&Garden
+              </li>
+              <div>
+                <img
+                  src="./assets/img/right.svg"
+                  class="object-cover cursor-pointer"
+                />
+                <!-- Dropdown content -->
+                <div
+                  class="absolute cursor-pointer cursor-pointer left-full top-0 w-[237px] max-h-[344px] bg-white border border-gray-300 shadow-lg group-hover:block hidden overflow-y-auto"
+                >
+                  <ul>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Trousers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jeans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Shorts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Coats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweaters
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Vests
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Activewear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Hoodies
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Polos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cardigans
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Chinos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Knitwear
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Overcoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Raincoats
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Bomber Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Puffer Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Denim Jackets
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Track Pants
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Joggers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      T-Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Henleys
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Sweatshirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Long Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Short Sleeve Shirts
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Cargos
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Turtlenecks
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Blazers
+                    </li>
+                    <li
+                      class="px-4 py-2 text-[14px] text-[#000000] hover:bg-gray-100"
+                    >
+                      Suits
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
 
-                <button
-                    class="size-[32px] bg-[#ff9130] rounded-[10px] cursor-pointer text-white inline-flex justify-center items-center ">
-                    <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
+        <!-- RIGHTBOX -->
+        <div class="text-white bg-[#000000] w-[892px] h-[344px]">
+          <div class="flex space-x-[40px]">
+            <div class="w-[294px] flex flex-col pt-[58px] pl-[64px]">
+              <div class="flex space-x-[14px] mb-[10px] items-center">
+                <div class="w-[40px] h-[49px]">
+                  <img src="./assets/img/apple.svg" class="object-cover" />
+                </div>
+                <p class="font-normal text-[16px] text-[#FAFAFA]">
+                  iPhone 14 Seriyası
+                </p>
+              </div>
+              <p class="text-[48px] text-[#FAFAFA] font-semibold w-[294px]">
+                10%-ə qədər Endirim
+              </p>
+              <div class="flex items-center mt-[22px] space-x-2">
+                <button class="underline text-[16px] text-#FAFAFA font-medium">
+                  İndi Al
                 </button>
+                <div class="size-[24px]">
+                  <img
+                    class="object-cover"
+                    src="./assets/img/icons arrow-right.svg"
+                  />
+                </div>
+              </div>
             </div>
+
+            <!-- right part -->
+            <div class="w-[496px] h-[310px] pt-[16px]">
+              <img
+                src="./assets/img/phone.png"
+                class="object-cover"
+                alt="phone"
+              />
+            </div>
+          </div>
+          <div class="flex space-x-3 items-center w-[110px] mx-auto">
+            <div class="size-[12px] rounded-full bg-gray-200"></div>
+            <div class="size-[12px] rounded-full bg-gray-200"></div>
+            <div class="size-[12px] rounded-full bg-gray-200"></div>
+            <div class="size-[12px] rounded-full bg-gray-200"></div>
+            <div class="size-[12px] rounded-full bg-gray-200"></div>
+          </div>
         </div>
-        <nav class="w-[347px] flex justify-end gap-x-[16px] items-center gap-x-[24px]">
-            <a href="./cart.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-                <i class="fa-solid fa-cart-shopping text-[20px] "></i>
-                <span class="text-[12px]">Səbətim</span>
+      </div>
+
+      <!-- FLASH SALES -->
+      <section class="border-b border-[#E3E3E3]">
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-[10px] mb-[24px]">
+            <div class="w-[20px] h-[40px] bg-[#FF7518] rounded-md"></div>
+            <p class="text-[16px] text-[#FF7518] font-semibold">Trenddə</p>
+          </div>
+
+          <div class="flex justify-between mb-[40px]">
+            <div class="flex space-x-[87px] items-center">
+              <p class="font-semibold text-[36px] text-[#000000]">Endirimlər</p>
+
+              <!-- <div class="w-[300px] space-x-[38px] flex items-center ">
+                <div class="flex flex-col">
+                  <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
+                    Gün
+                  </p>
+                  <p class="font-bold text-[32px] text-[#000000]">03</p>
+                </div>
+
+                <div class="flex flex-col">
+                  <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
+                    Saat
+                  </p>
+                  <p class="font-bold text-[32px] text-[#000000]">23</p>
+                </div>
+
+                <div class="flex flex-col">
+                  <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
+                    Dəqiqə
+                  </p>
+                  <p class="font-bold text-[32px] text-[#000000]">19</p>
+                </div>
+
+                <div class="flex flex-col">
+                  <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
+                    Saniyə
+                  </p>
+                  <p class="font-bold text-[32px] text-[#000000]">56</p>
+                </div>
+              </div> -->
+            </div>
+
+            <div class="space-x-[8px] flex items-center">
+              <div
+                class="bg-[#F5F5F5] size-[46px] rounded-full text-black flex justify-center items-center"
+              >
+                <img src="./assets/img/icons_arrow-left.svg" />
+              </div>
+              <div
+                class="bg-[#F5F5F5] size-[46px] rounded-full text-black flex justify-center items-center"
+              >
+                <img src="./assets/img/icons_arrow-right.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="justify-between flex items-center">
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
+                </p>
+              </div>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
             </a>
-            <a href="./wishlist.html" class="inline-flex items-center gap-x-[5px] hover:text-[#ff7518]">
-                <i class="fa-solid fa-heart text-[20px] "></i>
-                <span class="text-[12px]">Sevimlilərim</span>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
+                </p>
+              </div>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
             </a>
-            <div class="flex flex-col relative ">
-                <div id="account" class="inline-flex cursor-pointer items-center gap-x-[5px] hover:text-[#ff7518]">
-                    <i class="fa-solid fa-user text-[20px] "></i>
-                    <span class="text-[12px]">Hesabım</span>
-                </div>
-                <div id="dropdown"  class="absolute flex-col justify-start right-0 top-3 hidden w-[200px] bg-white shadow-lg rounded-lg mt-2 py-2">
-                    <a href="./account.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
-                      <img src="assets/img/Icon-user.svg" class="size-[22px] w-[20%] mr-2" alt=""> 
-                      <span class="text-left w-[80%]">Hesabımın idarəsi</span>
-                    </a>
-                    <a href="./my-orders.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]">
-                      <img src="assets/img/Icon-mallbag.svg" alt="" class="size-[24px] w-[20%] mr-2"> 
-                      <span class="text-left w-[80%]">Mənim sifarişlərim</span>
-                    </a>
-                    <a href="./customer-service.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> 
-                      <img src="assets/img/Icon-service.svg" alt="" class="size-[21px] w-[20%] mr-2"> 
-                      <span class="text-left w-[80%]">Müştəri xidməti</span>
-                    </a>
-                    <a href="./my-reviews.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> <img src="assets/img/Icon-Reviews.svg" alt="" class="size-[25px] w-[20%] mr-2"> 
-                      <span class="text-left w-[80%]">Mənim rəylərim</span>
-                    </a>
-                    <a href="./login.html" class="flex justify-between items-center px-4 py-2 text-sm hover:bg-gray-100 hover:text-[#ff7518]"> <img src="assets/img/Icon-logout.svg" alt="" class="size-[24px] w-[20%] mr-2">
-                      <span class="text-left w-[80%]">Çıxış et</span> 
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-  <!-- HEADER -->
-  <main class="w-[1200px] mx-auto">
-    <div class="mt-[40px] mb-[140px] flex justify-between">
-      <!-- LEFTBOX -->
-      <div class="mr-[16px] w-[217px] h-[344px]">
-        <ul>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class=" flex items-center justify-between mb-[16px] group">
-                <li class="text-[16px] text-center text-[#000000] font-normal">
-                  Woman's Fashion
-                </li>
-              <div class="relative">
-                <img src="./assets/img/right.svg" class="object-cover" />
-                <!-- Dropdown content -->
-                <div
-                  class="absolute top-0 left-full mt-2 hidden group-hover:block w-[140px] bg-white border border-gray-200 shadow-lg rounded-md">
-                  <ul class="py-2">
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 1
-                    </li>
-                    <li
-                      class="px-4 py-2 border-b border-gray-200 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 2
-                    </li>
-                    <li
-                      class="px-4 py-2 text-[16px] text-gray-700 font-medium hover:bg-gray-100 hover:text-[#ff7518] transition-colors duration-200">
-                      Sub-item 3
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-        </ul>
-      </div>
 
-      <!-- RIGHTBOX -->
-      <div class="text-white bg-[#000000] w-[892px] h-[344px]">
-        <div class="flex space-x-[40px]">
-          <div class="w-[294px] flex flex-col pt-[58px] pl-[64px]">
-            <div class="flex space-x-[14px] mb-[10px] items-center">
-              <div class="w-[40px] h-[49px]">
-                <img src="./assets/img/apple.svg" class="object-cover" />
-              </div>
-              <p class="font-normal text-[16px] text-[#FAFAFA]">
-                iPhone 14 Seriyası
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
               </p>
-            </div>
-            <p class="text-[48px] text-[#FAFAFA] font-semibold w-[294px]">
-              10%-ə qədər Endirim
-            </p>
-            <div class="flex items-center mt-[22px] space-x-2">
-              <button class="underline text-[16px] text-#FAFAFA font-medium">
-                İndi Al
-              </button>
-              <div class="size-[24px]">
-                <img class="object-cover" src="./assets/img/icons arrow-right.svg" />
-              </div>
-            </div>
-          </div>
-
-          <!-- right part -->
-          <div class="w-[496px] h-[310px] pt-[16px]">
-            <img src="./assets/img/phone.png" class="object-cover" alt="phone" />
-          </div>
-        </div>
-        <div class="flex space-x-3 items-center w-[110px] mx-auto">
-          <div class="size-[12px] rounded-full bg-gray-200"></div>
-          <div class="size-[12px] rounded-full bg-gray-200"></div>
-          <div class="size-[12px] rounded-full bg-gray-200"></div>
-          <div class="size-[12px] rounded-full bg-gray-200"></div>
-          <div class="size-[12px] rounded-full bg-gray-200"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FLASH SALES -->
-    <section class="border-b border-[#E3E3E3]">
-      <div class="flex flex-col">
-        <div class="flex items-center space-x-[10px] mb-[24px]">
-          <div class="w-[20px] h-[40px] bg-[#FF7518] rounded-md"></div>
-          <p class="text-[16px] text-[#FF7518] font-semibold">Trenddə</p>
-        </div>
-
-        <div class="flex justify-between mb-[40px]">
-          <div class="flex space-x-[87px] items-center">
-            <p class="font-semibold text-[36px] text-[#000000]">
-              Endirimlər
-            </p>
-
-            <div class="w-[300px] space-x-[38px] flex">
-              <div class="flex flex-col">
-                <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
-                  Gün
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
                 </p>
-                <p class="font-bold text-[32px] text-[#000000]">03</p>
               </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
 
-
-              <div class="flex flex-col">
-                <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
-                  Saat
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
                 </p>
-                <p class="font-bold text-[32px] text-[#000000]">03</p>
               </div>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
+            </a>
 
-              <div class="flex flex-col">
-                <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
-                  Dəqiqə
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
                 </p>
-                <p class="font-bold text-[32px] text-[#000000]">03</p>
               </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
 
-              <div class="flex flex-col">
-                <p class="mb-[4px] font-medium text-[12px] text-[#000000]">
-                  Saniyə
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
                 </p>
-                <p class="font-bold text-[32px] text-[#000000]">03</p>
+              </div>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
+            </a>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
               </div>
             </div>
           </div>
-
-          <div class="space-x-[8px] flex items-center">
-            <div class="bg-[#F5F5F5] size-[46px] rounded-full text-black flex justify-center items-center">
-              <img src="./assets/img/icons_arrow-left.svg" />
-            </div>
-            <div class="bg-[#F5F5F5] size-[46px] rounded-full text-black flex justify-center items-center">
-              <img src="./assets/img/icons_arrow-right.svg" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="space-x-[30px] flex items-center">
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <a href="./details.html"
-            class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
-              <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
-                -40%
-              </p>
-            </div>
-            <div class="w-[190px] h-[180px]">
-              <img src="./assets/img/item.svg" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </a>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
-              </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-              </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-            </div>
-          </div>
-        </div>
-        <!-- BOX2 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
-              <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
-                -40%
-              </p>
-            </div>
-            <div class="w-[190px] h-[180px]">
-              <img src="./assets/img/item.svg" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
-              </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-              </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-            </div>
-          </div>
-        </div>
-        <!-- BOX3 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
-              <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
-                -40%
-              </p>
-            </div>
-            <div class="w-[190px] h-[180px]">
-              <img src="./assets/img/item.svg" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
-              </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-              </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
-              <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
-                -40%
-              </p>
-            </div>
-            <div class="w-[190px] h-[180px]">
-              <img src="./assets/img/item.svg" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
-              </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-              </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- View the products -->
-      <div class="mx-auto w-[234px] my-[60px]">
-        <button class="h-[56px] w-[234px] bg-[#FF7518] rounded-md text-[#FAFAFA] text-[16px] font-medium text-center">
-          Hamısını göstər
-        </button>
-      </div>
-    </section>
-
-    <!-- BROWSE BT CATEGORY -->
-    <section>
-      <div class="flex flex-col mt-[70px]">
-        <div class="flex items-center space-x-[10px] mb-[24px]">
-          <div class="w-[20px] h-[40px] bg-[#FF7518] rounded-md"></div>
-          <p class="text-[16px] text-[#FF7518] font-semibold">Bu ay</p>
         </div>
 
-        <div class="flex justify-between mb-[40px]">
-          <p class="font-semibold text-[36px] text-[#000000]">
-            Ən çox satılanlar
-          </p>
-
-          <button class="h-[56px] w-[159px] bg-[#FF7518] rounded-md text-[#FAFAFA] text-[16px] font-medium text-center">
+        <!-- View the products -->
+        <div class="mx-auto w-[234px] my-[60px]">
+          <button
+            class="h-[56px] w-[234px] bg-[#FF7518] rounded-md text-[#FAFAFA] text-[16px] font-medium text-center"
+          >
             Hamısını göstər
           </button>
         </div>
-      </div>
+      </section>
 
-      <div class="space-x-[30px] mb-[140px] flex items-center">
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/gucci.png" class="object-cover" alt="img" />
-            </div>
+      <!-- En COX  SATILANLAR-->
+      <section>
+        <div class="flex flex-col mt-[70px]">
+          <div class="flex items-center space-x-[10px] mb-[24px]">
+            <div class="w-[20px] h-[40px] bg-[#FF7518] rounded-md"></div>
+            <p class="text-[16px] text-[#FF7518] font-semibold">Bu ay</p>
+          </div>
 
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
+          <div class="flex justify-between mb-[40px]">
+            <p class="font-semibold text-[36px] text-[#000000]">
+              Ən çox satılanlar
+            </p>
+
+            <button
+              class="h-[56px] w-[159px] bg-[#FF7518] rounded-md text-[#FAFAFA] text-[16px] font-medium text-center"
+            >
+              Hamısını göstər
+            </button>
+          </div>
+        </div>
+
+        <div class="justify-between mb-[100px] flex items-center">
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
+                </p>
+              </div>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+            </a>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
             </div>
           </div>
 
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
-              </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
+                </p>
               </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+            </a>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
+                </p>
+              </div>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+            </a>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
+          <!-- BOX -->
+          <div class="w-[270px] h-[360px] relative shadow-lg">
+            <a
+              href="./details.html"
+              class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
+            >
+              <div
+                class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
+              >
+                <p
+                  class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
+                >
+                  -40%
+                </p>
+              </div>
+              <div class="w-[190px] h-[180px]">
+                <img
+                  src="./assets/img/item.svg"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+            </a>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                  <div class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </div>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
             </div>
           </div>
         </div>
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/gucci.png" class="object-cover" alt="img" />
-            </div>
+      </section>
 
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
+      <!-- MUSIC EXPERIENCE -->
+      <section>
+        <div class="bg-[#000000] w-[1200px] h-[500px] flex mb-[71px]">
+          <div class="w-1/2 pt-[69px] pl-[56px]">
+            <p class="font-semibold text-[16px] text-[#00FF66] mb-[32px]">
+              Kateqoriyalar
             </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
-              </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
+            <p
+              class="font-semibold text-[48px] text-[#FAFAFA] w-[443px] mb-[32px]"
+            >
+              Enhance Your Music Experience
+            </p>
+            <div class="w-[320px] flex items-center space-x-[24px]">
+              <div
+                class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full"
+              >
+                <div class="flex flex-col justify-center items-center">
+                  <p class="font-bold text-[16px] text-[#000000]">23</p>
+                  <p class="font-normal text-[11px] text-[#000000]">Gün</p>
                 </div>
               </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              <div
+                class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full"
+              >
+                <div class="flex flex-col justify-center items-center">
+                  <p class="font-bold text-[16px] text-[#000000]">23</p>
+                  <p class="font-normal text-[11px] text-[#000000]">Saat</p>
+                </div>
+              </div>
+              <div
+                class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full"
+              >
+                <div class="flex flex-col justify-center items-center">
+                  <p class="font-bold text-[16px] text-[#000000]">23</p>
+                  <p class="font-normal text-[11px] text-[#000000]">Dəqiqə</p>
+                </div>
+              </div>
+              <div
+                class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full"
+              >
+                <div class="flex flex-col justify-center items-center">
+                  <p class="font-bold text-[16px] text-[#000000]">23</p>
+                  <p class="font-normal text-[11px] text-[#000000]">Saniyə</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="w-[171px] h-[56px] bg-[#00FF66] rounded-md text-center text-[#FAFAFA] mt-[40px]"
+            >
+              İndi Al
+            </button>
+          </div>
+          <div class="w-1/2 pt-[82px] pr-[60px]">
+            <img src="./assets/img/microphone.png" class="object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPLORE OUR PRODUCTS -->
+      <section>
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-[10px] mb-[24px]">
+            <div class="w-[20px] h-[40px] bg-[#FF7518] rounded-md"></div>
+            <p class="text-[16px] text-[#FF7518] font-semibold">
+              Məhsullarımız
+            </p>
+          </div>
+
+          <div class="flex justify-between mb-[40px]">
+            <div class="flex space-x-[87px] items-center">
+              <p class="font-semibold text-[36px] text-[#000000]">
+                Məhsullarımızı kəşf et
+              </p>
+            </div>
+
+            <div class="space-x-[8px] flex items-center">
+              <div
+                class="bg-[#F5F5F5] cursor-pointer size-[46px] rounded-full text-black flex justify-center items-center"
+              >
+                <img src="./assets/img/icons_arrow-left.svg" />
+              </div>
+              <div
+                class="bg-[#F5F5F5] cursor-pointer size-[46px] rounded-full text-black flex justify-center items-center"
+              >
+                <img src="./assets/img/icons_arrow-right.svg" />
+              </div>
             </div>
           </div>
         </div>
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/gucci.png" class="object-cover" alt="img" />
-            </div>
 
+        <div class="justify-between mb-[100px] gap-y-10 flex-wrap flex items-center">
+          <div class="w-[270px] h-[350px] relative shadow-lg ">
             <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
+              class="relative w-[270px] flex group items-center justify-center h-[250px] bg-[#F5F5F5]"
+            >
+              <div class="w-[190px] h-[180px] flex items-center justify-center">
+                <img
+                  src="./assets/img/car.png"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
             </div>
-          </div>
 
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
               </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <div class="flex space-x-[8px] items-center">
+                  <div class="w-[100px] flex items-center space-x-2">
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                  </div>
+                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
                 </div>
               </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+
+              <div class="flex space-x-[8px]">
+                <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="blue" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#A0BCE0] border border-black flex items-center justify-center peer-checked:p-2 peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[##A0BCE0] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#A0BCE0]"></div>
+                  </div>
+              </label>
+              <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="red" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#E07575] border border-black flex items-center justify-center peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[#E07575] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#E07575]"></div>
+                  </div>
+              </label>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/gucci.png" class="object-cover" alt="img" />
-            </div>
-
+          <!-- BOX1 -->
+          <div class="w-[270px] h-[350px] relative shadow-lg ">
             <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
+              class="relative w-[270px] flex group items-center justify-center h-[250px] bg-[#F5F5F5]"
+            >
+              <div class="w-[190px] h-[180px] flex items-center justify-center">
+                <img
+                  src="./assets/img/car.png"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
             </div>
-          </div>
 
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                $160
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
               </p>
-            </div>
-            <div class="flex space-x-[8px] items-center">
-              <div class="w-[100px] flex items-center space-x-2">
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
-                </div>
-                <div class="w-[20px]">
-                  <img class="object-cover" src="./assets/img/star.svg" />
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <div class="flex space-x-[8px] items-center">
+                  <div class="w-[100px] flex items-center space-x-2">
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                  </div>
+                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
                 </div>
               </div>
-              <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- MUSIC EXPERIENCE -->
-    <section>
-      <div class="bg-[#000000] w-[1200px] h-[500px] flex mb-[71px]">
-        <div class="w-1/2 pt-[69px] pl-[56px]">
-          <p class="font-semibold text-[16px] text-[#00FF66] mb-[32px]">
-            Kateqoriyalar
-          </p>
-          <p class="font-semibold text-[48px] text-[#FAFAFA] w-[443px] mb-[32px]">
-            Enhance Your Music Experience
-          </p>
-          <div class="w-[320px] flex items-center space-x-[24px]">
-            <div class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full">
-              <div class="flex flex-col justify-center items-center">
-                <p class="font-bold text-[16px] text-[#000000]">23</p>
-                <p class="font-normal text-[11px] text-[#000000]">Gün</p>
-              </div>
-            </div>
-            <div class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full">
-              <div class="flex flex-col justify-center items-center">
-                <p class="font-bold text-[16px] text-[#000000]">23</p>
-                <p class="font-normal text-[11px] text-[#000000]">Saat</p>
-              </div>
-            </div>
-            <div class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full">
-              <div class="flex flex-col justify-center items-center">
-                <p class="font-bold text-[16px] text-[#000000]">23</p>
-                <p class="font-normal text-[11px] text-[#000000]">Dəqiqə</p>
-              </div>
-            </div>
-            <div class="size-[62px] flex items-center justify-center bg-[#FFFFFF] rounded-full">
-              <div class="flex flex-col justify-center items-center">
-                <p class="font-bold text-[16px] text-[#000000]">23</p>
-                <p class="font-normal text-[11px] text-[#000000]">Saniyə</p>
+              <div class="flex space-x-[8px]">
+                <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="blue" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#A0BCE0] border border-black flex items-center justify-center peer-checked:p-2 peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[##A0BCE0] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#A0BCE0]"></div>
+                  </div>
+              </label>
+              <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="red" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#E07575] border border-black flex items-center justify-center peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[#E07575] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#E07575]"></div>
+                  </div>
+              </label>
               </div>
             </div>
           </div>
-          <button class="w-[171px] h-[56px] bg-[#00FF66] rounded-md text-center text-[#FAFAFA] mt-[40px]">
-            İndi Al
+          <!-- BOX1 -->
+          <div class="w-[270px] h-[350px] relative shadow-lg ">
+            <div
+              class="relative w-[270px] flex group items-center justify-center h-[250px] bg-[#F5F5F5]"
+            >
+              <div class="w-[190px] h-[180px] flex items-center justify-center">
+                <img
+                  src="./assets/img/car.png"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
+            </div>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <div class="flex space-x-[8px] items-center">
+                  <div class="w-[100px] flex items-center space-x-2">
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                  </div>
+                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+                </div>
+              </div>
+
+              <div class="flex space-x-[8px]">
+                <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="blue" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#A0BCE0] border border-black flex items-center justify-center peer-checked:p-2 peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[##A0BCE0] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#A0BCE0]"></div>
+                  </div>
+              </label>
+              <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="red" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#E07575] border border-black flex items-center justify-center peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[#E07575] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#E07575]"></div>
+                  </div>
+              </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOX1 -->
+          <div class="w-[270px] h-[350px] relative shadow-lg ">
+            <div
+              class="relative w-[270px] flex group items-center justify-center h-[250px] bg-[#F5F5F5]"
+            >
+              <div class="w-[190px] h-[180px] flex items-center justify-center">
+                <img
+                  src="./assets/img/car.png"
+                  class="object-cover"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
+              >
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </div>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
+              >
+                <div class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </div>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
+            </div>
+
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <div class="flex space-x-[8px] items-center">
+                  <div class="w-[100px] flex items-center space-x-2">
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                    <div class="w-[20px]">
+                      <img
+                        class="object-cover"
+                        src="./assets/img/star.svg"
+                      />
+                    </div>
+                  </div>
+                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+                </div>
+              </div>
+
+              <div class="flex space-x-[8px]">
+                <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="blue" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#A0BCE0] border border-black flex items-center justify-center peer-checked:p-2 peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[##A0BCE0] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#A0BCE0]"></div>
+                  </div>
+              </label>
+              <label class="inline-flex items-center">
+                  <input type="radio" name="color" value="red" class="hidden peer" />
+                  <div class="w-5 h-5 rounded-full bg-[#E07575] border border-black flex items-center justify-center peer-checked:w-5 peer-checked:h-5 peer-checked:bg-[#E07575] peer-checked:border-black peer-checked:ring-2 peer-checked:ring-black cursor-pointer transition-all duration-200">
+                      <div class="hidden peer-checked:block w-4 h-4 rounded-full bg-[#E07575]"></div>
+                  </div>
+              </label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="mx-auto w-[234px] ">
+          <button
+            class="h-[56px] w-[234px] bg-[#FF7518] rounded-md text-[#FAFAFA] text-[16px] font-medium text-center"
+          >
+            Hamısını göstər
           </button>
         </div>
-        <div class="w-1/2 pt-[82px] pr-[60px]">
-          <img src="./assets/img/microphone.png" class="object-cover" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EXPLORE OUR PRODUCTS -->
-    <section>
-      <div class="flex flex-col">
-        <div class="flex items-center space-x-[10px] mb-[24px]">
-          <div class="w-[20px] h-[40px] bg-[#FF7518] rounded-md"></div>
-          <p class="text-[16px] text-[#FF7518] font-semibold">Məhsullarımız</p>
-        </div>
-
-        <div class="flex justify-between mb-[40px]">
-          <div class="flex space-x-[87px] items-center">
-            <p class="font-semibold text-[36px] text-[#000000]">
-              Məhsullarımızı kəşf et
-            </p>
-          </div>
-
-          <div class="space-x-[8px] flex items-center">
-            <div class="bg-[#F5F5F5] size-[46px] rounded-full text-black flex justify-center items-center">
-              <img src="./assets/img/icons_arrow-left.svg" />
-            </div>
-            <div class="bg-[#F5F5F5] size-[46px] rounded-full text-black flex justify-center items-center">
-              <img src="./assets/img/icons_arrow-right.svg" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="gap-[30px] mb-[80px] flex-wrap flex items-center">
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/cat.png" class="object-cover" alt="img" />
-            </div>
+      <!-- SERVICES SECTION -->
+      <section>
+        <div class="w-[940px] mx-auto mt-[100px] mb-[120px] flex justify-between">
+          <div class="flex flex-col justify-center items-center">
             <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              class="bg-[#C1C1C1] size-[80px] rounded-full flex items-center justify-center"
+            >
+              <div
+                class="rounded-full size-[58px] bg-[#000000] flex items-center justify-center"
+              >
+                <img
+                  src="./assets/img/icon-delivery.svg"
+                  class="object-cover"
+                />
               </div>
             </div>
+            <p
+              class="font-semibold text-[20px] text-[#000000] mt-[24px] mb-[8px]"
+            >
+              FREE AND FAST DELIVERY
+            </p>
+            <p class="font-normal">Free delivery for all orders over $140</p>
           </div>
-        </div>
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/cat.png" class="object-cover" alt="img" />
-            </div>
+          <div class="flex flex-col justify-center items-center">
             <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              class="bg-[#C1C1C1] size-[80px] rounded-full flex items-center justify-center"
+            >
+              <div
+                class="rounded-full size-[58px] bg-[#000000] flex items-center justify-center"
+              >
+                <img src="./assets/img/headphone.svg" class="object-cover" />
               </div>
             </div>
+            <p
+              class="font-semibold text-[20px] text-[#000000] mt-[24px] mb-[8px]"
+            >
+              24/7 CUSTOMER SERVICE
+            </p>
+            <p class="font-normal">Friendly 24/7 customer support</p>
           </div>
-        </div>
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/cat.png" class="object-cover" alt="img" />
-            </div>
+          <div class="flex flex-col justify-center items-center">
             <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
+              class="bg-[#C1C1C1] size-[80px] rounded-full flex items-center justify-center"
+            >
+              <div
+                class="rounded-full size-[58px] bg-[#000000] flex items-center justify-center"
+              >
+                <img
+                  src="./assets/img/icon-delivery.svg"
+                  class="object-cover"
+                />
+              </div>
             </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
+            <p
+              class="font-semibold text-[20px] text-[#000000] mt-[24px] mb-[8px]"
+            >
+              MONEY BACK GUARANTEE
             </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-              </div>
-            </div>
+            <p class="font-normal">We reurn money within 30 days</p>
           </div>
         </div>
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/cat.png" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- BOX1 -->
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/car.png" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-              </div>
-            </div>
-
-            <div class="flex space-x-[8px]">
-              <div class="size-[20px] rounded-full border-black border-[2px] justify-center items-center flex">
-                <div class="bg-[#FB1314] size-[12px] rounded-full"></div>
-              </div>
-              <div class="size-[20px] rounded-full bg-[#FF7518]"></div>
-            </div>
-          </div>
-        </div>
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/car.png" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-              </div>
-            </div>
-
-            <div class="flex space-x-[8px]">
-              <div class="size-[20px] rounded-full border-black border-[2px] justify-center items-center flex">
-                <div class="bg-[#FB1314] size-[12px] rounded-full"></div>
-              </div>
-              <div class="size-[20px] rounded-full bg-[#FF7518]"></div>
-            </div>
-          </div>
-        </div>
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/car.png" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-              </div>
-            </div>
-
-            <div class="flex space-x-[8px]">
-              <div class="size-[20px] rounded-full border-black border-[2px] justify-center items-center flex">
-                <div class="bg-[#FB1314] size-[12px] rounded-full"></div>
-              </div>
-              <div class="size-[20px] rounded-full bg-[#FF7518]"></div>
-            </div>
-          </div>
-        </div>
-        <div class="w-[270px] h-[350px]">
-          <div class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] relative">
-            <div class="w-[190px] h-[180px] flex items-center justify-center">
-              <img src="./assets/img/car.png" class="object-cover" alt="img" />
-            </div>
-            <div
-              class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
-              <img src="./assets/img/heart.svg" class="object-cover" />
-            </div>
-          </div>
-
-          <div class="mt-[16px] flex flex-col">
-            <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-              HAVIT HV-G92 Gamepad
-            </p>
-            <div class="space-x-[12px] flex items-center mb-[8px]">
-              <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-              <div class="flex space-x-[8px] items-center">
-                <div class="w-[100px] flex items-center space-x-2">
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                  <div class="w-[20px]">
-                    <img class="object-cover" src="./assets/img/star.svg" />
-                  </div>
-                </div>
-                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-              </div>
-            </div>
-
-            <div class="flex space-x-[8px]">
-              <div class="size-[20px] rounded-full border-black border-[2px] justify-center items-center flex">
-                <div class="bg-[#FB1314] size-[12px] rounded-full"></div>
-              </div>
-              <div class="size-[20px] rounded-full bg-[#FF7518]"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="mx-auto w-[234px] mb-[80px]">
-        <button class="h-[56px] w-[234px] bg-[#FF7518] rounded-md text-[#FAFAFA] text-[16px] font-medium text-center">
-          Hamısını göstər
-        </button>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section>
-      <div class="grid grid-cols-3 gap-[88px] px-[60px]">
-        <div class=" h-[161px] flex flex-col items-center text-center cursor-pointer">
-            <div class="size-[80px] shrink-0 mb-[24px] bg-gray-300 rounded-full flex justify-center items-center">
-                <div class="size-[58px] bg-black rounded-full flex justify-center items-center">
-                    <figure class="px-[3px] py-[5px] size-[40px] inline-flex items-center">
-                        <img src="./assets/img/icon-delivery.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-            <p class="font-semibold text-[20px] uppercase">PULSUZ SÜRƏTLİ ÇATDIRILMA</p>
-            <p class="text-[14px] ">140 AZN üstündə alış-verişdə çatdırılma pulsuzdur</p>
-        </div>
-        <div class="h-[161px] flex flex-col items-center text-center cursor-pointer">
-            <div class="size-[80px] shrink-0 mb-[24px] bg-gray-300 rounded-full flex justify-center items-center">
-                <div class="size-[58px] bg-black rounded-full flex justify-center items-center">
-                    <figure class="px-[3px] py-[5px] size-[40px] inline-flex items-center">
-                        <img src="./assets/img/headphone.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-            <p class="font-semibold text-[20px] uppercase">24/7 MÜŞTƏRİ XİDMƏTİ</p>
-            <p class="text-[14px] ">24/7 Dostcanlı müştəri xidməti</p>
-        </div>
-        <div class="h-[161px] flex flex-col items-center text-center cursor-pointer">
-            <div class="size-[80px] shrink-0 mb-[24px] bg-gray-300 rounded-full flex justify-center items-center">
-                <div class="size-[58px] bg-black rounded-full flex justify-center items-center">
-                    <figure class="px-[3px] py-[5px] size-[40px] inline-flex items-center">
-                        <img src="./assets/img/shield-tick.svg" alt="">
-                    </figure>
-                </div>
-            </div>
-            <p class="font-semibold text-[20px] uppercase">PULUN GERİ QAYTARILMASI</p>
-            <p class="text-[14px] ">Pulunuzu 30 gün ərzində geri alın</p>
-        </div>
+      </section>
     </div>
-    </section>
-
-  </main>
-  <!-- FOOTER -->
-  <footer class="bg-black">
-    <div class="w-[1200px] mx-auto text-white py-[50px] flex justify-between mt-[50px]">
+    <!-- FOOTER -->
+    <footer class="bg-black">
+      <div
+        class="w-[1200px] mx-auto text-white py-[50px] flex justify-between mt-[50px]"
+      >
         <div>
-            <div class="space-y-[24px]">
-                <a href="./about.html">
-                    <img src="./assets/img/hərşeyburada2.svg" alt="">
-                </a>
-                <h2 class="text-[20px] font-[500]">Abunə Olun</h2>
-                <div class="flex space-x-[16px]">
-                    <a href="#" target="_blank">
-                        <i class="text-[20px] fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="text-[20px] fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="https://www.instagram.com/herseyburadaz/" target="_blank">
-                        <i class="text-[20px] fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" target="_blank">
-                        <i class="text-[20px] fa-brands fa-linkedin-in"></i>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="flex flex-col">
-            <h3 class="font-[500] text-[20px] mb-[24px]">Dəstək</h3>
-            <p class="text-[16px] mb-[16px]">
-                Bakı, Azərbaycan
-            </p>
-            <p class="text-[16px] mb-[16px]">
-                <a href="#">herseyburadacomp@gmail.com</a>
-            </p>
-            <p class="text-[16px] mb-[16px]">
-                <a href="#">+994 (55) 777 88 85</a>
-            </p>
-        </div>
-
-        <div class="flex flex-col">
-            <h3 class="font-[500] text-[20px] mb-[24px]">Hesab</h3>
-            <a class="text-[16px] mb-[16px]" href="./account.html">Hesabım</a>
-            <a class="text-[16px] mb-[16px]" href="./signup.html">Daxil ol</a>
-            <a class="text-[16px] mb-[16px]" href="./cart.html">Səbətim</a>
-            <a class="text-[16px] mb-[16px]" href="./wishlist.html">Sevimlilər</a>
-        </div>
-
-        <div class="flex flex-col">
-            <h3 class="font-[500] text-[20px] mb-[24px]">Tez Link</h3>
-            <a class="text-[16px] mb-[16px]" href="#">Gizlilik Siyasəti</a>
-            <a class="text-[16px] mb-[16px]" href="#">İstifadə Şərtləri</a>
-            <a class="text-[16px] mb-[16px]" href="./contact.html">Əlaqə</a>
-            <a class="text-[16px] mb-[16px]" href="./about.html">Haqqımızda</a>
-
-        </div>
-    </div>
-
-    <div class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px] border-[#141414]">
-        <div class="size-[20px]">
-            <img class="object-cover opacity-50" src="./assets/img/c.svg" alt="">
-        </div>
-        <div class="text-[16px] text-[#d9d9d9]">
-            <a href="#">
-                Copyright Rimel 2022. Bütün hüquqlar qorunur
+          <div class="space-y-[24px]">
+            <a href="./about.html">
+              <img src="./assets/img/hərşeyburada2.svg" alt="" />
             </a>
+            <h2 class="text-[20px] font-[500]">Subscribe</h2>
+            <h4 class="text-[16px] font-[300]">10% Endirim qazan</h4>
+          </div>
+
+          <div class="mt-[48px]">
+            <input
+              class="bg-black outline-none rounded-[4px] border border-white p-[8px]"
+              type="email"
+              placeholder="Enter your email"
+            />
+          </div>
         </div>
-    </div>
-</footer>
 
-  <script src="assets/js/script.js"></script>
+        <div class="flex flex-col">
+          <h3 class="font-[500] text-[20px] mb-[24px]">Dəstək</h3>
+          <p class="text-[16px] mb-[16px]">Bakı, Azərbaycan</p>
+          <p class="text-[16px] mb-[16px]">
+            <a href="#">herseyburadacomp@gmail.com</a>
+          </p>
+          <p class="text-[16px] mb-[16px]">
+            <a href="#">+994 (55) 777 88 85</a>
+          </p>
+        </div>
 
-</body>
+        <div class="flex flex-col">
+          <h3 class="font-[500] text-[20px] mb-[24px]">Hesab</h3>
+          <a class="text-[16px] mb-[16px]" href="./account.html">Hesabım</a>
+          <a class="text-[16px] mb-[16px]" href="./signup.html">Daxil ol</a>
+          <a class="text-[16px] mb-[16px]" href="./cart.html">Səbətim</a>
+          <a class="text-[16px] mb-[16px]" href="./wishlist.html">Sevimlilər</a>
+          <a class="text-[16px] mb-[16px]" href="./account.html">Alış-Veriş</a>
+        </div>
 
+        <div class="flex flex-col">
+          <h3 class="font-[500] text-[20px] mb-[24px]">Quick Link</h3>
+          <a class="text-[16px] mb-[16px]" href="#">Privacy Policy</a>
+          <a class="text-[16px] mb-[16px]" href="#">Terms Of Use</a>
+          <a class="text-[16px] mb-[16px]" href="./contact.html">Contact</a>
+        </div>
+        <div class="flex flex-col space-y-[16px]">
+          <i class="text-[20px] fa-brands fa-facebook-f"></i>
+          <i class="text-[20px] fa-brands fa-twitter"></i>
+          <i class="text-[20px] fa-brands fa-instagram"></i>
+          <i class="text-[20px] fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+      <div
+        class="flex items-center justify-center bg-black gap-x-[6px] py-[16px] border-t-[1px] border-[#141414]"
+      >
+        <div class="size-[20px]">
+          <img
+            class="object-cover opacity-50"
+            src="./assets/img/c.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="text-[16px] text-[#d9d9d9] border-b-[#d7d7d7]">
+          <a href="#"> Copyright Rimel 2022. All right reserved </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
