@@ -264,51 +264,6 @@
       </div>
     </div>
   </footer>
-    document.addEventListener('DOMContentLoaded', function() {
-  const cartItems = document.querySelectorAll('.border.border-gray-300.rounded-\\[4px\\]');
-
-  cartItems.forEach(item => {
-    const countElement = item.querySelector('.countElementCart');
-    const increaseButton = item.querySelector('.cartIncrease');
-    const decreaseButton = item.querySelector('.cartDecrease');
-
-    increaseButton.addEventListener('click', () => {
-      let count = parseInt(countElement.textContent);
-      count++;
-      countElement.textContent = count;
-      updateSubtotal(item, count);
-    });
-
-    decreaseButton.addEventListener('click', () => {
-      let count = parseInt(countElement.textContent);
-      if (count > 1) {
-        count--;
-        countElement.textContent = count;
-        updateSubtotal(item, count);
-      }
-    });
-  });
-
-  function updateSubtotal(item, count) {
-    const priceElement = item.closest('.grid').querySelector('.prices');
-    const subtotalElement = item.closest('.grid').querySelectorAll('.prices')[1];
-    const price = parseFloat(priceElement.textContent.replace('$', ''));
-    const subtotal = price * count;
-    subtotalElement.textContent = '$' + subtotal.toFixed(2);
-    updateTotal();
-  }
-
-  function updateTotal() {
-    const subtotals = document.querySelectorAll('.grid .prices:last-child');
-    let total = 0;
-    subtotals.forEach(subtotal => {
-      total += parseFloat(subtotal.textContent.replace('$', ''));
-    });
-    document.querySelector('.total').textContent = '$' + total.toFixed(2);
-  }
-});
-
-  </script> -->
 
   <script src="./assets/js/script.js"></script>
 </body>

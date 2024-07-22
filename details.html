@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <title>Hərşey Burada</title>
+    <title>Details cursor-pointer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet"
@@ -102,21 +101,21 @@
     <div class="w-[1200px] mx-auto flex justify-between mt-[50px]">
         <div class="flex gap-x-[43px]">
             <div class="flex flex-col gap-y-[16px]">
-                <figure class="w-[170px] flex-1 rounded-[4px] border">
+                <figure class="w-[170px] flex-1 rounded-[4px] border cursor-pointer">
                     <img class="object-cover"
                         src="https://images-na.ssl-images-amazon.com/images/I/51zyUeBrFgL._AC_UL600_SR600,600_.jpg"
                         alt="">
                 </figure>
-                <figure class="w-[170px] flex-1 rounded-[4px] border">
+                <figure class="w-[170px] flex-1 rounded-[4px] border cursor-pointer">
                     <img class="object-cover"
                         src="https://cdn.mobilesyrup.com/wp-content/uploads/2021/10/xbox-canadian-controller.jpg"
                         alt="">
                 </figure>
-                <figure class="w-[170px] flex-1 rounded-[4px] border">
+                <figure class="w-[170px] flex-1 rounded-[4px] border cursor-pointer">
                     <img class="object-cover"
                         src="https://m.media-amazon.com/images/I/51EfS8UJe9L._AC_UF894,1000_QL80_.jpg" alt="">
                 </figure>
-                <figure class="w-[170px] flex-1 rounded-[4px] border">
+                <figure class="w-[170px] flex-1 rounded-[4px] border cursor-pointer">
                     <img class="object-cover" src="https://i.ebayimg.com/images/g/2pwAAOSwu55kdZEk/s-l1200.jpg" alt="">
                 </figure>
             </div>
@@ -135,9 +134,9 @@
                 </div>
                 <div class="flex items-center mb-[16px] gap-x-[16px]">
                     <div class="inline-flex text-[16px] gap-x[5px]">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid text-yellow-400 fa-star"></i>
+                        <i class="fa-solid text-yellow-400 fa-star"></i>
+                        <i class="fa-solid text-yellow-400 fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                     </div>
@@ -275,287 +274,232 @@
 
         </div>
 
-        <div class="justify-between flex items-center">
-            <!-- BOX -->
-            <div class="w-[270px] h-[360px] relative shadow-lg">
-              <a
-                href="./details.html"
-                class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
-              >
-                <div
-                  class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
-                >
-                  <p
-                    class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
-                  >
-                    -40%
-                  </p>
-                </div>
-                <div class="w-[190px] h-[180px]">
-                  <img
-                    src="./assets/img/item.svg"
-                    class="object-cover"
-                    alt="img"
-                  />
-                </div>
-                <div
-                  class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
-                >
-                  <img src="./assets/img/heart.svg" class="object-cover" />
-                </div>
-                <div
-                  class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
-                >
-                  <div class="size-[24px] text-white">
-                    <img src="assets/img/sebet.svg" class="object-cover" />
-                  </div>
-                  <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
-                </div>
-              </a>
-  
-              <div class="p-3 flex flex-col">
-                <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-                  HAVIT HV-G92 Gamepad
+        <div class="grid grid-cols-4 gap-x-[35px]"> 
+          <div class=" h-[360px] relative shadow-lg">
+            <a href="./details.html"
+              class="relative  flex items-center justify-center h-[250px] bg-[#F5F5F5] group">
+              <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
+                <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
+                  -40%
                 </p>
-                <div class="space-x-[12px] flex items-center mb-[8px]">
-                  <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-                  <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                    $160
-                  </p>
-                </div>
-                <div class="flex space-x-[8px] items-center">
-                  <div class="w-[100px] flex items-center space-x-2">
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                  </div>
-                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-                </div>
               </div>
-            </div>
-  
-            <!-- BOX -->
-            <div class="w-[270px] h-[360px] relative shadow-lg">
-              <a
-                href="./details.html"
-                class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
-              >
-                <div
-                  class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
-                >
-                  <p
-                    class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
-                  >
-                    -40%
-                  </p>
-                </div>
-                <div class="w-[190px] h-[180px]">
-                  <img
-                    src="./assets/img/item.svg"
-                    class="object-cover"
-                    alt="img"
-                  />
-                </div>
-                <div
-                  class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
-                >
-                  <img src="./assets/img/heart.svg" class="object-cover" />
-                </div>
-                <div
-                  class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
-                >
-                  <div class="size-[24px] text-white">
-                    <img src="assets/img/sebet.svg" class="object-cover" />
-                  </div>
-                  <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
-                </div>
-              </a>
-  
-              <div class="p-3 flex flex-col">
-                <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-                  HAVIT HV-G92 Gamepad
-                </p>
-                <div class="space-x-[12px] flex items-center mb-[8px]">
-                  <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-                  <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                    $160
-                  </p>
-                </div>
-                <div class="flex space-x-[8px] items-center">
-                  <div class="w-[100px] flex items-center space-x-2">
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                  </div>
-                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-                </div>
+              <figure class="w-[190px] h-[180px]">
+                <img src="./assets/img/item.svg" class="object-cover" alt="img" />
+              </figure>
+              <figure
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </figure>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]">
+                <figure class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </figure>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
               </div>
-            </div>
+            </a>
   
-            <!-- BOX -->
-            <div class="w-[270px] h-[360px] relative shadow-lg">
-              <a
-                href="./details.html"
-                class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
-              >
-                <div
-                  class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
-                >
-                  <p
-                    class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
-                  >
-                    -40%
-                  </p>
-                </div>
-                <div class="w-[190px] h-[180px]">
-                  <img
-                    src="./assets/img/item.svg"
-                    class="object-cover"
-                    alt="img"
-                  />
-                </div>
-                <div
-                  class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
-                >
-                  <img src="./assets/img/heart.svg" class="object-cover" />
-                </div>
-                <div
-                  class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
-                >
-                  <div class="size-[24px] text-white">
-                    <img src="assets/img/sebet.svg" class="object-cover" />
-                  </div>
-                  <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
-                </div>
-              </a>
-  
-              <div class="p-3 flex flex-col">
-                <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-                  HAVIT HV-G92 Gamepad
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
                 </p>
-                <div class="space-x-[12px] flex items-center mb-[8px]">
-                  <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-                  <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                    $160
-                  </p>
-                </div>
-                <div class="flex space-x-[8px] items-center">
-                  <div class="w-[100px] flex items-center space-x-2">
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                  </div>
-                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-                </div>
               </div>
-            </div>
-  
-            <!-- BOX -->
-            <div class="w-[270px] h-[360px] relative shadow-lg">
-              <a
-                href="./details.html"
-                class="relative w-[270px] flex items-center justify-center h-[250px] bg-[#F5F5F5] group"
-              >
-                <div
-                  class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]"
-                >
-                  <p
-                    class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]"
-                  >
-                    -40%
-                  </p>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
                 </div>
-                <div class="w-[190px] h-[180px]">
-                  <img
-                    src="./assets/img/item.svg"
-                    class="object-cover"
-                    alt="img"
-                  />
-                </div>
-                <div
-                  class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center"
-                >
-                  <img src="./assets/img/heart.svg" class="object-cover" />
-                </div>
-                <div
-                  class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]"
-                >
-                  <div class="size-[24px] text-white">
-                    <img src="assets/img/sebet.svg" class="object-cover" />
-                  </div>
-                  <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
-                </div>
-              </a>
-  
-              <div class="p-3 flex flex-col">
-                <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
-                  HAVIT HV-G92 Gamepad
-                </p>
-                <div class="space-x-[12px] flex items-center mb-[8px]">
-                  <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
-                  <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
-                    $160
-                  </p>
-                </div>
-                <div class="flex space-x-[8px] items-center">
-                  <div class="w-[100px] flex items-center space-x-2">
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                    <div class="w-[20px]">
-                      <img class="object-cover" src="./assets/img/star.svg" />
-                    </div>
-                  </div>
-                  <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
-                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
               </div>
             </div>
           </div>
+          <div class=" h-[360px] relative shadow-lg">
+            <a href="./details.html"
+              class="relative  flex items-center justify-center h-[250px] bg-[#F5F5F5] group">
+              <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
+                <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
+                  -40%
+                </p>
+              </div>
+              <figure class="w-[190px] h-[180px]">
+                <img src="./assets/img/item.svg" class="object-cover" alt="img" />
+              </figure>
+              <figure
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </figure>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]">
+                <figure class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </figure>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
+            </a>
+  
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
+          <div class=" h-[360px] relative shadow-lg">
+            <a href="./details.html"
+              class="relative  flex items-center justify-center h-[250px] bg-[#F5F5F5] group">
+              <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
+                <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
+                  -40%
+                </p>
+              </div>
+              <figure class="w-[190px] h-[180px]">
+                <img src="./assets/img/item.svg" class="object-cover" alt="img" />
+              </figure>
+              <figure
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </figure>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]">
+                <figure class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </figure>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
+            </a>
+  
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
+          <div class=" h-[360px] relative shadow-lg">
+            <a href="./details.html"
+              class="relative  flex items-center justify-center h-[250px] bg-[#F5F5F5] group">
+              <div class="w-[55px] h-[26px] bg-[#FF7518] rounded-md absolute top-[12px] left-[12px]">
+                <p class="font-normal text-[12px] text-center py-1 text-[#FAFAFA]">
+                  -40%
+                </p>
+              </div>
+              <figure class="w-[190px] h-[180px]">
+                <img src="./assets/img/item.svg" class="object-cover" alt="img" />
+              </figure>
+              <figure
+                class="size-[34px] rounded-full bg-[#FFFFFF] absolute top-[12px] right-[12px] flex items-center justify-center">
+                <img src="./assets/img/heart.svg" class="object-cover" />
+              </figure>
+              <div
+                class="absolute bottom-0 py-[8px] hidden group-hover:flex space-x-[3px] items-center justify-center w-full bg-[#000000]">
+                <figure class="size-[24px] text-white">
+                  <img src="assets/img/sebet.svg" class="object-cover" />
+                </figure>
+                <p class="text-[#FFFF] text-[12px] font-normal">Add To Cart</p>
+              </div>
+            </a>
+  
+            <div class="p-3 flex flex-col">
+              <p class="font-medium text-[16px] text-[#000000] mb-[8px]">
+                HAVIT HV-G92 Gamepad
+              </p>
+              <div class="space-x-[12px] flex items-center mb-[8px]">
+                <p class="text-[16px] font-medium text-[#FF7518]">$120</p>
+                <p class="text-[16px] font-medium text-[#7F7F7F] line-through">
+                  $160
+                </p>
+              </div>
+              <div class="flex space-x-[8px] items-center">
+                <div class="w-[100px] flex items-center space-x-2">
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                  <figure class="w-[20px]">
+                    <img class="object-cover" src="./assets/img/star.svg" />
+                  </figure>
+                </div>
+                <p class="text-[#7F7F7F] font-semibold text-[14px]">(88)</p>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
