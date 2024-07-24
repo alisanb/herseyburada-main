@@ -68,7 +68,7 @@ class Counter {
   addEventListeners() {
     if (this.decreaseButton) {
       this.decreaseButton.addEventListener("click", () => {
-        if (this.count > 0) {
+        if (this.count > 1) {
           this.count--;
           this.updateCount();
         }
@@ -196,7 +196,7 @@ const counter = new Counter({
 
 const sliderConfig = {
   slideWidth: 892, // Slide width in pixels
-  autoSlideInterval: 5000, // Auto slide interval in milliseconds
+  autoSlideInterval: 4000, // Auto slide interval in milliseconds
   slides: [
     {
       imgSrc: "./assets/img/apple.svg",
@@ -227,68 +227,86 @@ const sliderConfig = {
 };
 
 let currentIndex = 0;
-const slider = document.getElementById('slider');
+const sliderAdvert = document.querySelector('#sliderAdvert');
 const dots = document.querySelectorAll('.dot');
+let slideInterval;
+if (sliderAdvert === null) {
+  console.error('sliderAdvert öğesi bulunamadı.');
+}
+
 
 // Slaytları oluştur
-sliderConfig.slides.forEach((slide, index) => {
-  const slideElement = document.createElement('div');
-  slideElement.className = 'slide flex justify-between items-center px-[30px] w-[892px] h-[344px] flex-shrink-0';
+document.addEventListener('DOMContentLoaded', () => {
+  const sliderAdvert = document.getElementById('sliderAdvert');
   
-  slideElement.innerHTML = `
-    <div class="flex flex-col justify-between">
-      <div class="flex space-x-[14px] mb-[10px] items-center">
-        <figure class="w-[40px] h-[49px]">
-          <img src="${slide.imgSrc}" class="object-cover" />
-        </figure>
-        <p class="font-normal text-[16px] text-[#FAFAFA]">${slide.series}</p>
+  sliderConfig.slides.forEach((slide, index) => {
+    const slideElement = document.createElement('div');
+    slideElement.className = 'slide flex justify-between items-center px-[30px] w-[892px] h-[344px] flex-shrink-0';
+    
+    slideElement.innerHTML = `
+      <div class="flex flex-col justify-between">
+        <div class="flex space-x-[14px] mb-[10px] items-center">
+          <figure class="w-[40px] h-[49px]">
+            <img src="${slide.imgSrc}" class="object-cover" />
+          </figure>
+          <p class="font-normal text-[16px] text-[#FAFAFA]">${slide.series}</p>
+        </div>
+        <p class="text-[46px] text-[#FAFAFA] font-semibold">${slide.discount}</p>
+        <div class="flex items-center mt-[22px] space-x-2">
+          <button class="underline text-[16px] text-[#FAFAFA] font-medium">${slide.buttonText}</button>
+          <figure class="size-[24px]">
+            <img class="object-cover" src="./assets/img/icons arrow-right.svg" />
+          </figure>
+        </div>
       </div>
-      <p class="text-[46px] text-[#FAFAFA] font-semibold">${slide.discount}</p>
-      <div class="flex items-center mt-[22px] space-x-2">
-        <button class="underline text-[16px] text-[#FAFAFA] font-medium">${slide.buttonText}</button>
-        <figure class="size-[24px]">
-          <img class="object-cover" src="./assets/img/icons arrow-right.svg" />
-        </figure>
-      </div>
-    </div>
-    <figure class="w-[496px] h-[310px] pt-[16px]">
-      <img src="${slide.mainImgSrc}" class="object-cover w-full h-full" alt="phone" />
-    </figure>
-  `;
-  slider.appendChild(slideElement);
-});
-
-// Dot'ların tıklama işlevlerini ayarla
-dots.forEach((dot, index) => {
-  dot.onclick = () => moveToSlide(index);
-});
-
-const totalSlides = sliderConfig.slides.length;
-
-function moveToSlide(index) {
-  if (index >= 0 && index < totalSlides) {
-    currentIndex = index;
-    const offset = -currentIndex * sliderConfig.slideWidth; // Slide width
-    slider.style.transform = `translateX(${offset}px)`;
-    updateDots();
-  }
-}
-
-function updateDots() {
-  dots.forEach((dot, index) => {
-    if (index === currentIndex) {
-      dot.classList.add('active');
-    } else {
-      dot.classList.remove('active');
-    }
+      <figure class="w-[496px] h-[310px] pt-[16px]">
+        <img src="${slide.mainImgSrc}" class="object-cover w-full h-full" alt="phone" />
+      </figure>
+    `;
+    sliderAdvert.appendChild(slideElement);
   });
-}
 
-// Auto slide
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % totalSlides;
-  moveToSlide(currentIndex);
-}, sliderConfig.autoSlideInterval); // Change slide every 5 seconds
-
-// İlk slayta gidildiğinde dot'ları güncelleyin
-moveToSlide(0);
+  const totalSlides = sliderConfig.slides.length;
+  const dots = document.querySelectorAll('.dot');
+  
+  dots.forEach((dot, index) => {
+    dot.onclick = () => {
+      moveToSlide(index);
+      resetSlideInterval();
+    };
+  });
+  
+  function moveToSlide(index) {
+    if (index >= 0 && index < totalSlides) {
+      currentIndex = index;
+      const offset = -currentIndex * sliderConfig.slideWidth;
+      sliderAdvert.style.transform = `translateX(${offset}px)`;
+      updateDots();
+    }
+  }
+  
+  function updateDots() {
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+  
+  function startSlideInterval() {
+    slideInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      moveToSlide(currentIndex);
+    }, sliderConfig.autoSlideInterval);
+  }
+  
+  function resetSlideInterval() {
+    clearInterval(slideInterval);
+    startSlideInterval();
+  }
+  
+  moveToSlide(0);
+  startSlideInterval();
+});
